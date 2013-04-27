@@ -1,0 +1,17 @@
+/* line 4, ../../sass/chat-header.scss */
+.chat-box header {
+  height: 40px;
+  padding: 9px 15px;
+  background-color: #969696;
+}
+/* line 9, ../../sass/chat-header.scss */
+.chat-box header label {
+  color: #ffffff;
+}
+/* line 13, ../../sass/chat-header.scss */
+.chat-box header i {
+  color: rgba(34, 34, 34, 0.66);
+  font-size: 20px;
+  padding-left: 5px;
+  line-height: 22px;
+}

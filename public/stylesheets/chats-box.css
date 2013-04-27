@@ -1,0 +1,15 @@
+/* line 1, ../../sass/chats-box.scss */
+.chats-box {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+/* line 8, ../../sass/chats-box.scss */
+.chats-box ul {
+  padding: 0;
+}
+/* line 10, ../../sass/chats-box.scss */
+.chats-box ul li {
+  list-style: none;
+}

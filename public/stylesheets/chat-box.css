@@ -1,0 +1,12 @@
+/* line 2, ../../sass/chat-box.scss */
+.chat-box {
+  float: right;
+  margin-right: 20px;
+  width: 350px;
+  height: 300px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #6c6c6c;
+  padding: 0;
+  background: #f2f2f2;
+}
