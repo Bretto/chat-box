@@ -4,14 +4,15 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
-  , http = require('http')
-  , path = require('path')
-  , server = http.createServer(app)
-  , io = require('socket.io').listen(server)
-  , socket = require('./routes/socket.js');
+    , app = express()
+    , http = require('http')
+    , path = require('path')
+    , server = http.createServer(app)
+    , routes = require('./routes')
+    , socket = require('./routes/socket.js')
+    , io = require('socket.io').listen(server);
 
-var app = express();
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -24,7 +25,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-// development only
+//development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
@@ -32,7 +33,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 
 io.sockets.on('connection', socket);
+global.io = io;
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
+server.listen(app.get('port'));
+

@@ -68,3 +68,15 @@ body, html {
   padding: 0;
   background: #f2f2f2;
 }
+
+/* line 1, ../../sass/connection.scss */
+.connection {
+  list-style: none;
+  background-color: #ffffff;
+  padding: 0 10px;
+}
+
+/* line 2, ../../sass/connections.scss */
+.connections select {
+  width: 100px;
+}

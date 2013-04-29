@@ -1,13 +1,37 @@
-// Keep track of which names are used so that there are no duplicates
-var userNames = (function () {
+var users = (function () {
+
+    var users = {};
+
+    var getUsers = function(){
+        return [
+                    {name:"Guest 1", uid:1},
+                    {name:"Guest 2", uid:2},
+                    {name:"Guest 3", uid:3}
+                ]
+    }
+
+    return {
+        getUsers: getUsers
+    }
+
+}());
+
+var socketConnections = (function () {
+    var connections = {};
     var names = {};
 
     var claim = function (name) {
         if (!name || names[name]) {
             return false;
         } else {
-            names[name] = {name:name, online:true};
+            names[name] = {name:name};
             return true;
+        }
+    };
+
+    var freeName = function (name) {
+        if (names[name]) {
+            delete names[name];
         }
     };
 
@@ -24,112 +48,85 @@ var userNames = (function () {
         return name;
     };
 
+    var newConnection = function (socketId,name) {
+        if (!socketId || connections[socketId]) {
+            return false;
+        } else {
+            connections[socketId] = {socketId:socketId, name:name};
+            return true;
+        }
+    };
+
+    var killConnection = function (socketId) {
+        if (connections[socketId]) {
+            delete connections[socketId];
+        }
+    };
+
     // serialize claimed names as an array
-    var get = function (name) {
+    var getConnections = function (socketId) {
         var res = [];
-        for (n in names) {
-            //if(n !== name){
-                user = names[n];
-                res.push(user);
-            //}
+        for (var connection in connections) {
+            if(socketId !== connection){
+                var c = connections[connection];
+                res.push(c);
+            }
         }
 
         return res;
     };
 
-    var offline = function (name) {
-        if (names[name]) {
-            names[name].online = false;
+    var getSocketId = function(name){
+        var sId = null;
+        for (var socketId in connections) {
+            var connection = connections[socketId];
+            if(connection.name === name){
+                sId = connection.socketId;
+                return sId;
+            }
         }
-    };
-
-    var status = function (name, status) {
-        if (names[name]) {
-            names[name].online = status;
-        }
-    };
-
-    var free = function (name) {
-        if (names[name]) {
-            delete names[name];
-        }
-    };
+        return sId;
+    }
 
     return {
-        claim: claim,
-        free: free,
-        status: status,
-        get: get,
-        getGuestName: getGuestName
+        getSocketId: getSocketId,
+        getGuestName: getGuestName,
+        newConnection: newConnection,
+        killConnection: killConnection,
+        freeName: freeName,
+        getConnections: getConnections
     };
 }());
 
 
 // export function for listening to the socket
 module.exports = function (socket) {
-    var name = userNames.getGuestName();
 
-    // send the new user their name and a list of users
-    socket.emit('init', {
-        user: {name: name, online:true},
-        users: userNames.get(name)
-    });
+    var name = socketConnections.getGuestName();
+    socketConnections.newConnection(socket.id, name);
+
+    socket.emit('user:connect', {
+                                    name: name,
+                                    socketId: socket.id,
+                                    connections: socketConnections.getConnections(socket.id)
+                                });
 
     // notify other clients that a new user has joined
-    socket.broadcast.emit('user:join', {
-        name: name
-    });
-
-    socket.on('change:status', function (data, fn) {
-
-        socket.broadcast.emit('change:status', {
-            name: name,
-            status: data.status
-        });
-        userNames.status(name, data.status);
-
-        fn(true);
-    });
-
-
-    // broadcast a user's message to other users
-    socket.on('send:message', function (data) {
-        socket.broadcast.emit('send:message', {
-            user: name,
-            text: data.message
-        });
-    });
-
-    socket.on('send:noty', function (data) {
-        socket.broadcast.emit('send:noty', data);
-    });
-
-
-    // validate a user's name change, and broadcast it on success
-    socket.on('change:name', function (data, fn) {
-        if (userNames.claim(data.name)) {
-            var oldName = name; // where are they getting name from ?
-            userNames.free(oldName);
-
-            name = data.name;
-
-            socket.broadcast.emit('change:name', {
-                oldName: oldName,
-                newName: name
-            });
-
-            fn(true);
-        } else {
-            fn(false);
-        }
-    });
-
+    socket.broadcast.emit('user:join', {socketId: socket.id, name: name});
 
     // clean up when a user leaves, and broadcast it to other users
     socket.on('disconnect', function () {
-        socket.broadcast.emit('user:disconnect', {
-            name: name
-        });
-        userNames.free(name);
+        socket.broadcast.emit('user:disconnect', {socketId: socket.id});
+        socketConnections.killConnection(socket.id);
+        socketConnections.freeName(name);
     });
+
+    socket.on('user:msg', function (data) {
+        var receiverSocketId = socketConnections.getSocketId(data.receiverName)
+        global.io.sockets.socket(receiverSocketId).emit('user:msg', {
+            emitterName: data.emitterName,
+            msg: data.msg
+        });
+    });
+
 };

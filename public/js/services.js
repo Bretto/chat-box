@@ -2,16 +2,17 @@
 
 var services = angular.module('App.services', []);
 
-services.factory('chatsModel', function ($http, $log, $rootScope, $routeParams, $location) {
+services.factory('ChatsModel', function ($http, $log, $rootScope, $routeParams, $location) {
 
     var chatsModel = {
-        root: ''
+        chats: [1,1],
+        connections: []
     };
 
     return chatsModel;
 });
 
-services.factory('socket', function ($rootScope) {
+services.factory('Socket', function ($rootScope) {
     var socket = io.connect();
     return {
         on: function (eventName, callback) {
