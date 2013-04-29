@@ -2,7 +2,8 @@
     <label class="label">{{ name }}</label>
     <select ng-model="connection" ng-options="connection.name for connection in connections"></select>
         </span>
-    <a href="#" ng-click="onSendMsg()" class="small button">Create Chat Box</a>
+    <a href="#" ng-click="onMakeChatBox()" class="small button">Create Chat Box</a>
+    <a href="#" ng-click="onGetMessages()" class="small button">Get Messages</a>
 </div>
 
 

@@ -31,9 +31,16 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/messages', routes.getMessages);
 
 io.sockets.on('connection', socket);
 global.io = io;
+
+var data = function getData(x,cb){
+
+}
+
+
 
 server.listen(app.get('port'));
 

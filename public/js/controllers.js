@@ -9,7 +9,7 @@ controllers.controller('ChatsCtrl', function ($scope, $rootScope, $timeout, $log
     $scope.chats = ChatsModel.chats;
 });
 
-controllers.controller('ConnectionsCtrl', function ($scope, $rootScope, $timeout, $log, ChatsModel, Socket){
+controllers.controller('ConnectionsCtrl', function ($scope, $rootScope, $http, $log, ChatsModel, Socket){
     $log.info('ConnectionsCtrl');
 
     $scope.connections = ChatsModel.connections;
@@ -40,16 +40,38 @@ controllers.controller('ConnectionsCtrl', function ($scope, $rootScope, $timeout
         }
     });
 
-    $scope.onSendMsg = function(){
-        var data = {emitterName:$scope.name, receiverName:$scope.connection.name, msg:"Hello World"};
-        Socket.emit("user:msg", data);
+    $scope.onMakeChatBox = function(){
+        var data = {emitterName:$scope.name, receiverName:$scope.connection.name, annonceId:1};
+        ChatsModel.chats.push(data);
+        //Socket.emit("user:msg", data);
     }
 
-    Socket.on('user:msg', function (data) {
-        $log.info(data);
-    });
+    $scope.onGetMessages = function(){
+        $http({method: 'GET', url: '/messages'}).
+            success(function(data, status, headers, config) {
+                // this callback will be called asynchronously
+                // when the response is available
+                $log.info('success',data);
+            }).
+            error(function(data, status, headers, config) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                $log.info('error',data);
+            });
+    }
+
+
 });
 
+
+//controllers.controller('ChatBoxCtrl', function ($scope, $rootScope, $timeout, $log, ChatsModel, Socket){
+//    $log.info('ChatBoxCtrl');
+//    $scope.messages = [];
+//    Socket.on('user:msg', function (data) {
+//        $log.info(data);
+//        $scope.messages.push(data.msg);
+//    });
+//});
 
 
 

@@ -3,14 +3,23 @@
 
 var directives = angular.module('App.directives', []);
 
-directives.directive('imgFadeIn', function ($log, $parse, $timeout) {
+directives.directive('chatBox', function ($log, Socket) {
 
-    function getRandom(max, min) {
-        return Math.floor(Math.random() * (1 + max - min) + min);
+    function link(scope, elem, attr, ctrl) {
+
+        $log.info('ChatBoxCtrl');
+
+        Socket.on('user:msg', function (data) {
+            $log.info(data);
+            $scope.messages.push(data.msg);
+        });
     }
 
     return {
+        replace:true,
+        scope:{},
         restrict: 'A',
         link: link
     }
 });
+

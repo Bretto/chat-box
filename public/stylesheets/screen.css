@@ -45,8 +45,10 @@ body, html {
 }
 
 /* line 3, ../../sass/chat-section.scss */
-.chat-box section {
+.chat-box ul {
   height: 208px;
+  margin: 0;
+  overflow: scroll;
 }
 
 /* line 3, ../../sass/chat-footer.scss */
