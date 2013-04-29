@@ -31,7 +31,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/messages', routes.getMessages);
+
+app.get('/messages/:userId', routes.getMessages);
 
 //var getMessages = function (req, res){
 //    console.log('This is USR MSG');
@@ -46,11 +47,6 @@ app.get('/messages', routes.getMessages);
 
 io.sockets.on('connection', socket);
 global.io = io;
-
-var data = function getData(x,cb){
-
-}
-
 
 
 server.listen(app.get('port'));

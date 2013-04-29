@@ -47,7 +47,7 @@ controllers.controller('ConnectionsCtrl', function ($scope, $rootScope, $http, $
     }
 
     $scope.onGetMessages = function(){
-        $http({method: 'GET', url: '/messages'}).
+        $http({method: 'GET', url: '/messages/123'}).
             success(function(data, status, headers, config) {
                 // this callback will be called asynchronously
                 // when the response is available

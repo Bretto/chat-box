@@ -13,7 +13,8 @@ exports.partial = function (req, res) {
 };
 
 exports.getMessages = function (req, res){
-    console.log('This is USR MSG');
+    var userId = req.params.userId;
+    console.log('This is USR MSG', userId);
 
 //    function fakeResponce(cb){
 //        setTimeout(function(){
@@ -33,7 +34,7 @@ exports.getMessages = function (req, res){
 //    getData(function(data){
 //        $log.info(data);
 //    });
-    data = {'data':'this is my data'};
+    data = {'data':'this is my data', userId:userId};
     res.send(data);
     //res.end();
 };

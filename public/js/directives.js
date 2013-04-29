@@ -7,7 +7,7 @@ directives.directive('chatBox', function ($log, Socket) {
 
     function link(scope, elem, attr, ctrl) {
 
-        $log.info('ChatBoxCtrl');
+        $log.info('ChatBoxCtrl', scope.emitterName, scope.receiverName, scope.annonceId );
 
         Socket.on('user:msg', function (data) {
             $log.info(data);
@@ -17,7 +17,7 @@ directives.directive('chatBox', function ($log, Socket) {
 
     return {
         replace:true,
-        scope:{},
+        scope:{data: "="},
         restrict: 'A',
         link: link
     }
