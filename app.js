@@ -33,6 +33,17 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/messages', routes.getMessages);
 
+//var getMessages = function (req, res){
+//    console.log('This is USR MSG');
+//    data = {'data':'this is my data 2'};
+//    res.send(data);
+//    //res.end();
+//};
+//
+//app.get('/messages', getMessages);
+
+
+
 io.sockets.on('connection', socket);
 global.io = io;
 
