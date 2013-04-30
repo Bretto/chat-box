@@ -5,6 +5,7 @@ var services = angular.module('App.services', []);
 services.factory('ChatsModel', function ($http, $log, $rootScope, $routeParams, $location) {
 
     var chatsModel = {
+        userId:0,
         chats: [],
         connections: []
     };

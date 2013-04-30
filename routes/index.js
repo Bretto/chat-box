@@ -12,7 +12,7 @@ exports.partial = function (req, res) {
     res.render('partial/' + name);
 };
 
-exports.getMessages = function (req, res){
+exports.getMessage = function (req, res){
     var userId = req.params.userId;
     console.log('This is USR MSG', userId);
 
@@ -38,3 +38,12 @@ exports.getMessages = function (req, res){
     res.send(data);
     //res.end();
 };
+
+exports.getAnnonce = function (req, res){
+    var annonce = [
+            {uid:1, aId:1, title:'New computer'},
+            {uId:1, aId:2, title:'Nissan Navara'}
+        ];
+    res.send(annonce);
+}
+

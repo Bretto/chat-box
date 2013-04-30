@@ -31,7 +31,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/messages/:userId', routes.getMessages);
+app.get('/message/:userId', routes.getMessage);
+app.get('/annonce', routes.getAnnonce);
 
 //var getMessages = function (req, res){
 //    console.log('This is USR MSG');

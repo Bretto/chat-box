@@ -1,9 +1,11 @@
-<div class="connections" ng-controller="ConnectionsCtrl">
-    <label class="label">{{ name }}</label>
+<div class="connections form-inline" ng-controller="ConnectionsCtrl">
+    <h3>{{ name }}</h3>
     <select ng-model="connection" ng-options="connection.name for connection in connections"></select>
-        </span>
-    <a href="#" ng-click="onMakeChatBox()" class="small button">Create Chat Box</a>
-    <a href="#" ng-click="onGetMessages()" class="small button">Get Messages</a>
+    <button class="btn btn-primary" type="button" ng-click="onMakeChatBox()">Create Chat Box</button>
+    <button class="btn btn-primary" type="button" ng-click="onGetMessages()" class="small button">Get Messages</button>
+    <button class="btn"
+            type="button" ng-model="chatEnable" btn-checkbox ng-class="{selected: chatEnable}" ng-click="onChatEnable()">
+        Chat Enable</button>
 </div>
 
 

@@ -1,20 +1,61 @@
-var users = (function () {
 
-    var users = {};
 
-    var getUsers = function(){
-        return [
-                    {name:"Guest 1", uid:1},
-                    {name:"Guest 2", uid:2},
-                    {name:"Guest 3", uid:3}
-                ]
-    }
 
-    return {
-        getUsers: getUsers
-    }
+//var users = (function () {
+//
+//    var usersDico = {};
+//    users[1] = {name:"Guest 1", id:1, annonces:[1,2,3]};
+//
+//    var getUsersArr = function(){
+//        var usersArr = [];
+//        for (var userId in usersDico) {
+//           var user = usersDico[userId];
+//            usersArr.push(user);
+//        }
+//        return usersArr;
+//    }
+//
+//    var getUsersDico = function(){
+//        return usersDico;
+//    }
+//
+//    return {
+//        getUsersArr: getUsersArr,
+//        getUsersDico: getUsersDico
+//    }
+//
+//}());
 
-}());
+
+//var chatRooms = (function () {
+//
+//    var chatRooms = {};
+//    chatRooms[1|1|2] = ;
+//    chatRooms[2] = {name:"Guest 2", id:2, annonceId:2};
+//    chatRooms[3] = {name:"Guest 3", id:3, annonceId:3};
+//
+//    var getUsersArr = function(){
+//        var usersArr = [];
+//        for (var userId in usersDico) {
+//            var user = usersDico[userId];
+//            usersArr.push(user);
+//        }
+//        return usersArr;
+//    }
+//
+//    var getUsersDico = function(){
+//        return usersDico;
+//    }
+//
+//    return {
+//        getUsersArr: getUsersArr,
+//        getUsersDico: getUsersDico
+//    }
+//
+//}());
+
+
+
 
 var socketConnections = (function () {
     var connections = {};
@@ -48,23 +89,22 @@ var socketConnections = (function () {
         return name;
     };
 
-    var newConnection = function (socketId,name) {
+    var newConnection = function(socketId,name) {
         if (!socketId || connections[socketId]) {
             return false;
         } else {
-            connections[socketId] = {socketId:socketId, name:name};
+            connections[socketId] = {socketId:socketId, name:name, chatEnable:false};
             return true;
         }
     };
 
-    var killConnection = function (socketId) {
+    var killConnection = function(socketId) {
         if (connections[socketId]) {
             delete connections[socketId];
         }
     };
 
-    // serialize claimed names as an array
-    var getConnections = function (socketId) {
+    var getConnectionsArray = function(socketId) {
         var res = [];
         for (var connection in connections) {
             if(socketId !== connection){
@@ -72,8 +112,11 @@ var socketConnections = (function () {
                 res.push(c);
             }
         }
-
         return res;
+    };
+
+    var getConnectionsDico = function() {
+        return connections;
     };
 
     var getSocketId = function(name){
@@ -94,7 +137,8 @@ var socketConnections = (function () {
         newConnection: newConnection,
         killConnection: killConnection,
         freeName: freeName,
-        getConnections: getConnections
+        getConnectionsArray: getConnectionsArray,
+        getConnectionsDico: getConnectionsDico
     };
 }());
 
@@ -105,10 +149,12 @@ module.exports = function (socket) {
     var name = socketConnections.getGuestName();
     socketConnections.newConnection(socket.id, name);
 
+    var connectionsArr = socketConnections.getConnectionsArray(socket.id);
+
     socket.emit('user:connect', {
                                     name: name,
                                     socketId: socket.id,
-                                    connections: socketConnections.getConnections(socket.id)
+                                    connections: connectionsArr
                                 });
 
     // notify other clients that a new user has joined
@@ -122,11 +168,24 @@ module.exports = function (socket) {
     });
 
     socket.on('user:msg', function (data) {
-        var receiverSocketId = socketConnections.getSocketId(data.receiverName)
-        global.io.sockets.socket(receiverSocketId).emit('user:msg', {
-            emitterName: data.emitterName,
-            msg: data.msg
-        });
+        var receiverSocketId = socketConnections.getSocketId(data.receiverName);
+        var connectionsDico = socketConnections.getConnectionsDico();
+        var connection = connectionsDico[receiverSocketId];
+        if(connection.chatEnable){
+            global.io.sockets.socket(receiverSocketId).emit('user:msg', {
+                emitterName: data.emitterName,
+                msg: data.msg
+            });
+        }
     });
+
+    socket.on('user:chatEnable', function (data) {
+        var receiverSocketId = socketConnections.getSocketId(data.userId);
+        var connectionsDico = socketConnections.getConnectionsDico();
+        var connection = connectionsDico[receiverSocketId];
+        connection.chatEnable = data.chatEnable;
+    });
+
+
 
 };
