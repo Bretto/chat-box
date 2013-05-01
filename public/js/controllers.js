@@ -11,7 +11,6 @@ controllers.controller('ChatsCtrl', function ($scope, $rootScope, $timeout, $log
         ChatsModel.chats.push(data);
         Socket.emit("joinChatRoom",data);
     });
-
 });
 
 
@@ -34,8 +33,24 @@ controllers.controller('AnnoncesCtrl', function ($scope, $rootScope, $timeout, $
         //check that annonce Id Vendeur is different from Id User
         if(annonce.uId === ChatsModel.user.id)return;
 
-        var data = {fUser:ChatsModel.user, tId:annonce.uId, aId:annonce.aId};
+        var data = {
+                        fUser:ChatsModel.user,
+                        tId:annonce.uId,
+                        aId:annonce.aId,
+                        title:annonce.title
+        };
         data.roomId = ChatsModel.makeRoomId(data);
+
+        var hasRoom = false;
+        for (var i = 0; i < ChatsModel.chats.length; i++) {
+            var chat = ChatsModel.chats[i];
+            if(chat.roomId === data.roomId){
+                hasRoom = true;
+            }
+        }
+        //prevents the creation of same chat rooms
+        if(hasRoom)return;
+
         ChatsModel.chats.push(data);
         Socket.emit("joinChatRoom",data);
     }

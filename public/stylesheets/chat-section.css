@@ -4,3 +4,7 @@
   margin: 0;
   overflow: scroll;
 }
+/* line 9, ../../sass/chat-section.scss */
+.chat-box .msg {
+  margin: 10px;
+}
