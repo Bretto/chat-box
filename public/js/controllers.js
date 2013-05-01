@@ -41,15 +41,9 @@ controllers.controller('AnnoncesCtrl', function ($scope, $rootScope, $timeout, $
         };
         data.roomId = ChatsModel.makeRoomId(data);
 
-        var hasRoom = false;
-        for (var i = 0; i < ChatsModel.chats.length; i++) {
-            var chat = ChatsModel.chats[i];
-            if(chat.roomId === data.roomId){
-                hasRoom = true;
-            }
-        }
+
         //prevents the creation of same chat rooms
-        if(hasRoom)return;
+        if(ChatsModel.getChatBox(data.roomId))return;
 
         ChatsModel.chats.push(data);
         Socket.emit("joinChatRoom",data);

@@ -2,7 +2,7 @@
 
 var directives = angular.module('App.directives', []);
 
-directives.directive('chatBox', function ($log, Socket) {
+directives.directive('chatBox', function ($log, Socket, ChatsModel) {
 
     function link(scope, elem, attr, ctrl) {
 
@@ -24,11 +24,24 @@ directives.directive('chatBox', function ($log, Socket) {
                 aId:scope.data.aId,
                 msg:scope.data.sendMsg
             };
+
             scope.data.sendMsg = '';
             scope.messages.push(data.msg);
-            $log.info(data.roomId);
+            //$log.info(data.roomId);
             Socket.emit("user:msg", data);
         }
+
+        scope.onMin = function(){
+            scope.data.isMin = (scope.data.isMin === true)? false : true;
+            //$log.info(scope.data.isMin);
+        }
+
+        scope.onClose = function(){
+//          $log.info('onClose');
+            var chat = ChatsModel.getChatBox(scope.data.roomId);
+            ChatsModel.destroy(chat);
+        }
+
     }
 
     return {
