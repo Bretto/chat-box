@@ -11,6 +11,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel) {
         function addMeMsg(msg){
             var msg = {type:"me", message:msg};
             scope.messages.push(msg);
+            //objDiv.scrollTop = objDiv.scrollHeight;
         }
 
         function addYouMsg(msg){
@@ -69,6 +70,21 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel) {
     return {
         replace:true,
         scope:{data: "="},
+        restrict: 'A',
+        link: link
+    }
+});
+
+directives.directive('autoScroll', function ($log, Socket, ChatsModel) {
+
+    function link(scope, elem, attr, ctrl) {
+
+        scope.$watch(function(){return  elem[0].scrollHeight}, function(value){
+            elem[0].scrollTop = value;
+        });
+    }
+
+    return {
         restrict: 'A',
         link: link
     }
