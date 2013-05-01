@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a97f557-a77f-4798-815a-526bb7b2c884" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partial/user.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/user.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/partial/connection.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/partial/connections.htm" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partial/annonce.html" afterPath="$PROJECT_DIR$/public/partial/annonce.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/chats-admin.ejs" afterPath="$PROJECT_DIR$/views/chats-admin.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers.js" afterPath="$PROJECT_DIR$/public/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/directives.js" afterPath="$PROJECT_DIR$/public/js/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/screen.scss" afterPath="$PROJECT_DIR$/sass/screen.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/screen.scssc" afterPath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/screen.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/services.js" afterPath="$PROJECT_DIR$/public/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/socket.js" afterPath="$PROJECT_DIR$/routes/socket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chat-box.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,25 +74,52 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="7" selection-start="4161" selection-end="4161" vertical-scroll-proportion="0.0">
+            <state line="14" column="3" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="annonce.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/partial/annonce.html">
+      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="10" selection-start="151" selection-end="151" vertical-scroll-proportion="-3.125">
+            <state line="12" column="46" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filters.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/filters.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="17" selection-start="341" selection-end="341" vertical-scroll-proportion="0.30821916">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/partial/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="6" selection-start="289" selection-end="289" vertical-scroll-proportion="0.18010291">
+            <state line="7" column="6" selection-start="289" selection-end="289" vertical-scroll-proportion="-4.375">
               <folding />
             </state>
           </provider>
@@ -148,15 +161,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connections.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sass/connections.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="3" selection-start="87" selection-end="968" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -187,10 +191,10 @@
         <option value="$PROJECT_DIR$/public/partial/user.html" />
         <option value="$PROJECT_DIR$/views/chats-admin.ejs" />
         <option value="$PROJECT_DIR$/public/partial/annonce.html" />
-        <option value="$PROJECT_DIR$/public/js/controllers.js" />
         <option value="$PROJECT_DIR$/sass/screen.scss" />
         <option value="$PROJECT_DIR$/sass/user.scss" />
         <option value="$PROJECT_DIR$/routes/socket.js" />
+        <option value="$PROJECT_DIR$/public/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -533,27 +537,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="46" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/partial/annonces.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="6" selection-start="163" selection-end="163" vertical-scroll-proportion="-2.5">
@@ -610,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="7" selection-start="4161" selection-end="4161" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/socket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="22" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0">
@@ -626,7 +602,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/partial/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="289" selection-end="289" vertical-scroll-proportion="0.18010291">
+        <state line="7" column="6" selection-start="289" selection-end="289" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="3" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="46" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="17" selection-start="341" selection-end="341" vertical-scroll-proportion="0.30821916">
           <folding />
         </state>
       </provider>

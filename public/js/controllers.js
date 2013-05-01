@@ -8,85 +8,9 @@ controllers.controller('ChatsCtrl', function ($scope, $rootScope, $timeout, $log
     $scope.chats = ChatsModel.chats;
 
     Socket.on('msgAlert', function (data) {
-
         ChatsModel.chats.push(data);
         Socket.emit("joinChatRoom",data);
-
-        //var data = {fUser:ChatsModel.user, tId:annonce.uId, aId:annonce.aId};
-        //var roomId = ChatsModel.makeRoomId(data);
-        //$log.info(roomId);
-//        var hasRoom = false;
-//        for (var i = 0; i < ChatsModel.chats.length; i++) {
-//            var chat = ChatsModel.chats[i];
-//            if(chat.roomId === data.roomId){
-//                hasRoom = true;
-//            }
-//        }
-
-//        if(!hasRoom){
-//            data.roomId = roomId;
-//            data.newRoom = true;
-//            ChatsModel.chats.push(data);
-//        }
-
-        //scope.messages.push(data.msg);
     });
-
-});
-
-controllers.controller('ConnectionsCtrl', function ($scope, $rootScope, $http, $log, ChatsModel, Socket){
-    $log.info('ConnectionsCtrl');
-
-    $scope.onChatEnable = function(){
-        var data = { userId:$scope.name };
-        data.chatEnable = ($scope.chatEnable)? true:false;
-        Socket.emit("user:chatEnable", data);
-    }
-
-    $scope.connections = ChatsModel.connections;
-
-    //populate the connections
-    Socket.on('user:connect', function (user) {
-        $log.info('user:connect');
-        ChatsModel.user = user;
-        $scope.name = user.name;
-    });
-
-    //push new connection to current connections
-    Socket.on('user:join', function (data) {
-        $log.info('user:join');
-        $scope.connections.push(data);
-    });
-
-    // add a message to the conversation when a user disconnects or leaves the room
-    Socket.on('user:disconnect', function (data) {
-        $log.info('user:disconnect');
-
-        for (var i = 0; i < $scope.connections.length; i++) {
-            var connection = $scope.connections[i];
-            if (connection.socketId === data.socketId) {
-                $scope.connections.splice(i, 1);
-                break;
-            }
-        }
-    });
-
-
-
-    $scope.onGetMessages = function(){
-        $http({method: 'GET', url: '/messages/123'}).
-            success(function(data, status, headers, config) {
-                // this callback will be called asynchronously
-                // when the response is available
-                $log.info('success',data);
-            }).
-            error(function(data, status, headers, config) {
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
-                $log.info('error',data);
-            });
-    }
-
 
 });
 
@@ -132,6 +56,12 @@ controllers.controller('UserCtrl', function ($scope, $rootScope, $timeout, $log,
     Socket.on('user:disconnect', function (data) {
         $log.info('user:disconnect');
     });
+
+    $scope.onChatEnable = function(){
+        var data = { userId:$scope.name };
+        data.chatEnable = ($scope.chatEnable)? true:false;
+        Socket.emit("user:chatEnable", data);
+    }
 
 });
 
