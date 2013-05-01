@@ -5,8 +5,33 @@ var controllers = angular.module('App.controllers', []);
 
 controllers.controller('ChatsCtrl', function ($scope, $rootScope, $timeout, $log, ChatsModel, Socket){
     $log.info('ChatsCtrl');
-
     $scope.chats = ChatsModel.chats;
+
+    Socket.on('msgAlert', function (data) {
+
+        ChatsModel.chats.push(data);
+        Socket.emit("joinChatRoom",data);
+
+        //var data = {fUser:ChatsModel.user, tId:annonce.uId, aId:annonce.aId};
+        //var roomId = ChatsModel.makeRoomId(data);
+        //$log.info(roomId);
+//        var hasRoom = false;
+//        for (var i = 0; i < ChatsModel.chats.length; i++) {
+//            var chat = ChatsModel.chats[i];
+//            if(chat.roomId === data.roomId){
+//                hasRoom = true;
+//            }
+//        }
+
+//        if(!hasRoom){
+//            data.roomId = roomId;
+//            data.newRoom = true;
+//            ChatsModel.chats.push(data);
+//        }
+
+        //scope.messages.push(data.msg);
+    });
+
 });
 
 controllers.controller('ConnectionsCtrl', function ($scope, $rootScope, $http, $log, ChatsModel, Socket){
@@ -21,10 +46,10 @@ controllers.controller('ConnectionsCtrl', function ($scope, $rootScope, $http, $
     $scope.connections = ChatsModel.connections;
 
     //populate the connections
-    Socket.on('user:connect', function (data) {
+    Socket.on('user:connect', function (user) {
         $log.info('user:connect');
-        $scope.name = data.name;
-        $scope.connections = data.connections;
+        ChatsModel.user = user;
+        $scope.name = user.name;
     });
 
     //push new connection to current connections
@@ -46,11 +71,7 @@ controllers.controller('ConnectionsCtrl', function ($scope, $rootScope, $http, $
         }
     });
 
-    $scope.onMakeChatBox = function(){
-        var data = {emitterName:$scope.name, receiverName:$scope.connection.name, annonceId:1};
-        ChatsModel.chats.push(data);
-        //Socket.emit("user:msg", data);
-    }
+
 
     $scope.onGetMessages = function(){
         $http({method: 'GET', url: '/messages/123'}).
@@ -83,6 +104,35 @@ controllers.controller('AnnoncesCtrl', function ($scope, $rootScope, $timeout, $
             // or server returns response with an error status.
             $log.info('error',data);
         });
+
+    $scope.onMakeChatBox = function(annonce){
+
+        //check that annonce Id Vendeur is different from Id User
+        if(annonce.uId === ChatsModel.user.id)return;
+
+        var data = {fUser:ChatsModel.user, tId:annonce.uId, aId:annonce.aId};
+        data.roomId = ChatsModel.makeRoomId(data);
+        ChatsModel.chats.push(data);
+        Socket.emit("joinChatRoom",data);
+    }
+});
+
+controllers.controller('UserCtrl', function ($scope, $rootScope, $timeout, $log, ChatsModel, Socket, $http){
+
+    Socket.on('user:connect', function (user) {
+        $log.info('user:connect');
+        ChatsModel.user = user;
+        $scope.name = user.name;
+    });
+
+    Socket.on('user:join', function (data) {
+        $log.info('user:join');
+    });
+
+    Socket.on('user:disconnect', function (data) {
+        $log.info('user:disconnect');
+    });
+
 });
 
 

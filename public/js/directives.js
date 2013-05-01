@@ -9,23 +9,21 @@ directives.directive('chatBox', function ($log, Socket) {
         scope.messages = [];
 
         Socket.on('user:msg', function (data) {
-            $log.info(data);
-            scope.messages.push(data.msg);
+            if(data.roomId === scope.data.roomId)
+                scope.messages.push(data.msg);
         });
 
         scope.onSendMsg = function(e){
 
             var data = {
-                emitterName:scope.data.emitterName,
-                receiverName:scope.data.receiverName,
-                annonceId:1,
+                fUser:scope.data.fUser,
+                roomId:scope.data.roomId,
+                tId:scope.data.tId,
+                aId:scope.data.aId,
                 msg:scope.data.msg
             };
             scope.messages.push(data.msg);
-            //ChatsModel.chats.push(data);
-            //Socket.emit("user:msg", data);
-
-            $log.info(data.msg);
+            $log.info(data.roomId);
             Socket.emit("user:msg", data);
         }
     }

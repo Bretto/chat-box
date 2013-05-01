@@ -40,10 +40,10 @@ exports.getMessage = function (req, res){
 };
 
 exports.getAnnonce = function (req, res){
-    var annonce = [
-            {uid:1, aId:1, title:'New computer'},
+    var annonces = [
+            {uId:1, aId:1, title:'New computer'},
             {uId:1, aId:2, title:'Nissan Navara'}
         ];
-    res.send(annonce);
+    res.send(annonces);
 }
 

@@ -4,10 +4,15 @@ var services = angular.module('App.services', []);
 
 services.factory('ChatsModel', function ($http, $log, $rootScope, $routeParams, $location) {
 
+    var makeRoomId = function(data){
+        var id = 'vid'+ data.tId + 'aid' + data.aId + 'cid' + data.fUser.id;
+        return id;
+    }
+
     var chatsModel = {
-        userId:0,
+        user: {},
         chats: [],
-        connections: []
+        makeRoomId: makeRoomId
     };
 
     return chatsModel;
