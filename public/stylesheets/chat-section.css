@@ -5,6 +5,13 @@
   overflow: scroll;
 }
 /* line 9, ../../sass/chat-section.scss */
-.chat-box .msg {
+.chat-box .msg-me {
   margin: 10px;
+  color: red;
+}
+/* line 14, ../../sass/chat-section.scss */
+.chat-box .msg-you {
+  margin: 10px;
+  color: green;
+  text-align: right;
 }

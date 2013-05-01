@@ -6,8 +6,15 @@
     overflow: scroll;
   }
 
-  .msg{
+  .msg-me{
     margin: 10px;
+    color: red;
+  }
+
+  .msg-you{
+    margin: 10px;
+    color: green;
+    text-align: right;
   }
 
 }

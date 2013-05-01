@@ -10,9 +10,3 @@
   padding: 0;
   margin: 0;
 }
-/* line 11, ../../sass/chats-box.scss */
-.chats-box ul li {
-  margin: 10px;
-  list-style: none;
-  display: inline-block;
-}

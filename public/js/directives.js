@@ -7,14 +7,36 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel) {
     function link(scope, elem, attr, ctrl) {
 
         scope.messages = [];
-        scope.messages.push(scope.data.msg);
+
+        function addMeMsg(msg){
+            var msg = {type:"me", message:msg};
+            scope.messages.push(msg);
+        }
+
+        function addYouMsg(msg){
+            var msg = {type:"you", message:msg};
+            scope.messages.push(msg);
+        }
+
+        function addInfoMsg(msg){
+            var msg = {type:"info", message:msg};
+            scope.messages.push(msg);
+        }
+
+        if(angular.isDefined(scope.data.msg))
+            addYouMsg(scope.data.msg);
+            //scope.messages.push(scope.data.msg);
+
 
         Socket.on('user:msg', function (data) {
             if(data.roomId === scope.data.roomId)
-                scope.messages.push(data.msg);
+//                scope.messages.push(data.msg);
+                addYouMsg(data.msg);
         });
 
         scope.onSendMsg = function(e){
+
+            addMeMsg(scope.data.sendMsg);
 
             var data = {
                 title:scope.data.title,
@@ -25,19 +47,19 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel) {
                 msg:scope.data.sendMsg
             };
 
-            scope.data.sendMsg = '';
-            scope.messages.push(data.msg);
-            //$log.info(data.roomId);
+
+            //var msg = {type:"me", message:data.msg};
+            //scope.messages.push(msg);
+
             Socket.emit("user:msg", data);
+            scope.data.sendMsg = '';
         }
 
         scope.onMin = function(){
             scope.data.isMin = (scope.data.isMin === true)? false : true;
-            //$log.info(scope.data.isMin);
         }
 
         scope.onClose = function(){
-//          $log.info('onClose');
             var chat = ChatsModel.getChatBox(scope.data.roomId);
             ChatsModel.destroy(chat);
         }

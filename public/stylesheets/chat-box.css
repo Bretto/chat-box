@@ -1,5 +1,8 @@
 /* line 2, ../../sass/chat-box.scss */
 .chat-box {
+  margin: 10px;
+  list-style: none;
+  display: inline-block;
   width: 350px;
   border-style: solid;
   border-width: 1px;
