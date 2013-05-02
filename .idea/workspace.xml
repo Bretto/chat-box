@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a97f557-a77f-4798-815a-526bb7b2c884" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-section.scssc" afterPath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-section.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/chat-section.css" afterPath="$PROJECT_DIR$/public/stylesheets/chat-section.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/chat-section.scss" afterPath="$PROJECT_DIR$/sass/chat-section.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partial/msg-me.html" afterPath="$PROJECT_DIR$/public/partial/msg-me.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partial/msg-you.html" afterPath="$PROJECT_DIR$/public/partial/msg-you.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="3a97f557-a77f-4798-815a-526bb7b2c884" name="Default" comment="" />
     <ignored path="chat-box.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367453321662" ignored="false" />
