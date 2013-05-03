@@ -102,6 +102,9 @@ module.exports = function (socket) {
         socket.join(data.roomId);
     });
 
+    socket.on('leaveChatRoom', function(data){
+        socket.leave(data.roomId);
+    });
 
     socket.on('user:msg', function (data) {
 

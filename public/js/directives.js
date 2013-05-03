@@ -11,7 +11,6 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel) {
         function addMeMsg(msg){
             var msg = {type:"me", message:msg};
             scope.messages.push(msg);
-            //objDiv.scrollTop = objDiv.scrollHeight;
         }
 
         function addYouMsg(msg){
@@ -24,14 +23,16 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel) {
             scope.messages.push(msg);
         }
 
-        if(angular.isDefined(scope.data.msg))
-            addYouMsg(scope.data.msg);
-            //scope.messages.push(scope.data.msg);
+        function init(){
+            if(angular.isDefined(scope.data.msg)){
+                addYouMsg(scope.data.msg);
+            }
+        }
 
+        init();
 
         Socket.on('user:msg', function (data) {
             if(data.roomId === scope.data.roomId)
-//                scope.messages.push(data.msg);
                 addYouMsg(data.msg);
         });
 
@@ -48,10 +49,6 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel) {
                 msg:scope.data.sendMsg
             };
 
-
-            //var msg = {type:"me", message:data.msg};
-            //scope.messages.push(msg);
-
             Socket.emit("user:msg", data);
             scope.data.sendMsg = '';
         }
@@ -63,6 +60,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel) {
         scope.onClose = function(){
             var chat = ChatsModel.getChatBox(scope.data.roomId);
             ChatsModel.destroy(chat);
+            Socket.emit("leaveChatRoom", scope.data);
         }
 
     }

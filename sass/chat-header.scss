@@ -5,6 +5,7 @@
       height: 40px;
       padding: 9px 15px;
       background-color: #969696;
+      @include border-top-radius(5px);
 
       label{
         color: #ffffff;

@@ -1,9 +1,15 @@
 .chat-box{
 
   ul{
-    height: 208px;
+    height: 240px;
     margin: 0;
     overflow: scroll;
+
+    border-color: #cdcdcd;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none;
+    border-bottom: none;
   }
 
   p{
