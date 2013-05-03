@@ -1,9 +1,21 @@
 .chat-box{
 
+  .ref{
+    @include border-radius(10px);
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    height: 20px;
+  }
+
   ul{
-    height: 240px;
+    height: 300px;
     margin: 0;
     overflow: scroll;
+
+    background-color: #fff;
 
     border-color: #cdcdcd;
     border-style: solid;
@@ -12,27 +24,42 @@
     border-bottom: none;
   }
 
-  p{
+  .msg-wrap{
+    position: relative;
     display: inline-block;
-    background-color: #e0e0e0;
-    padding: 10px 7px;
+    @include border-radius(14px);
+
     margin: 0;
-    min-width: 73px;
+    min-width: 100px;
+  }
+
+  p{
+    padding: 10px;
+    margin: 0;
+    position: relative;
   }
 
 
 
   .msg-me{
+
+
+
     margin: 10px;
     margin-bottom: 40px;
     text-align: right;
+
+
+    .msg-wrap{
+      background-color: #A7E1FC;
+    }
 
     .triangle{
       width: 0px;
       height: 0px;
       border-style: solid;
-      border-width: 25px 0px 0 25px;
-      border-color: #e0e0e0 transparent transparent transparent;
+      border-width: 20px 0px 0 15px;
+      border-color: #A7E1FC transparent transparent transparent;
       float: right;
     }
 
@@ -48,13 +75,17 @@
   .msg-you{
     margin: 10px;
 
+    .msg-wrap{
+      background-color: #eee;
+    }
+
     .triangle{
       display: inline-block;
       width: 0px;
       height: 0px;
       border-style: solid;
-      border-width: 25px 25px 0 0px;
-      border-color: #e0e0e0 transparent transparent transparent;
+      border-width: 20px 15px 0 0;
+      border-color: #eee transparent transparent transparent;
     }
 
     .user-name{

@@ -8,6 +8,7 @@
 /* line 10, ../../sass/base.scss */
 body, html {
   height: 100%;
+  background-color: #086F1E;
 }
 
 /* line 1, ../../sass/chats-box.scss */
@@ -26,8 +27,22 @@ body, html {
 /* line 4, ../../sass/chat-header.scss */
 .chat-box header {
   height: 40px;
-  padding: 9px 15px;
-  background-color: #969696;
+  background: #3481ed;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #3481ed 0%, #023a72 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3481ed), color-stop(100%, #023a72));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3481ed 0%, #023a72 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #3481ed 0%, #023a72 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #3481ed 0%, #023a72 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3481ed 0%, #023a72 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3481ed', endColorstr='#023a72',GradientType=0 );
+  /* IE6-9 */
   -moz-border-radius-topleft: 5px;
   -webkit-border-top-left-radius: 5px;
   border-top-left-radius: 5px;
@@ -38,71 +53,107 @@ body, html {
 /* line 10, ../../sass/chat-header.scss */
 .chat-box header label {
   color: #ffffff;
+  padding-left: 10px;
+  padding-top: 9px;
 }
-/* line 14, ../../sass/chat-header.scss */
+/* line 16, ../../sass/chat-header.scss */
 .chat-box header i {
   float: right;
   color: rgba(34, 34, 34, 0.66);
-  font-size: 20px;
-  padding-left: 5px;
+  font-size: 17px;
+  padding-right: 7px;
+  padding-top: 4px;
   line-height: 22px;
 }
 
 /* line 3, ../../sass/chat-section.scss */
+.chat-box .ref {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  height: 20px;
+}
+/* line 13, ../../sass/chat-section.scss */
 .chat-box ul {
-  height: 240px;
+  height: 300px;
   margin: 0;
   overflow: scroll;
+  background-color: #fff;
   border-color: #cdcdcd;
   border-style: solid;
   border-width: 1px;
   border-top: none;
   border-bottom: none;
 }
-/* line 15, ../../sass/chat-section.scss */
-.chat-box p {
+/* line 27, ../../sass/chat-section.scss */
+.chat-box .msg-wrap {
+  position: relative;
   display: inline-block;
-  background-color: #e0e0e0;
-  padding: 10px 7px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
   margin: 0;
-  min-width: 73px;
+  min-width: 100px;
 }
-/* line 25, ../../sass/chat-section.scss */
+/* line 36, ../../sass/chat-section.scss */
+.chat-box p {
+  padding: 10px;
+  margin: 0;
+  position: relative;
+}
+/* line 44, ../../sass/chat-section.scss */
 .chat-box .msg-me {
   margin: 10px;
   margin-bottom: 40px;
   text-align: right;
 }
-/* line 30, ../../sass/chat-section.scss */
+/* line 53, ../../sass/chat-section.scss */
+.chat-box .msg-me .msg-wrap {
+  background-color: #A7E1FC;
+}
+/* line 57, ../../sass/chat-section.scss */
 .chat-box .msg-me .triangle {
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 25px 0px 0 25px;
-  border-color: #e0e0e0 transparent transparent transparent;
+  border-width: 20px 0px 0 15px;
+  border-color: #A7E1FC transparent transparent transparent;
   float: right;
 }
-/* line 39, ../../sass/chat-section.scss */
+/* line 66, ../../sass/chat-section.scss */
 .chat-box .msg-me .user-name {
   float: right;
   background: none;
   margin: 8px;
   margin-top: 10px;
 }
-/* line 48, ../../sass/chat-section.scss */
+/* line 75, ../../sass/chat-section.scss */
 .chat-box .msg-you {
   margin: 10px;
 }
-/* line 51, ../../sass/chat-section.scss */
+/* line 78, ../../sass/chat-section.scss */
+.chat-box .msg-you .msg-wrap {
+  background-color: #eee;
+}
+/* line 82, ../../sass/chat-section.scss */
 .chat-box .msg-you .triangle {
   display: inline-block;
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 25px 25px 0 0px;
-  border-color: #e0e0e0 transparent transparent transparent;
+  border-width: 20px 15px 0 0;
+  border-color: #eee transparent transparent transparent;
 }
-/* line 60, ../../sass/chat-section.scss */
+/* line 91, ../../sass/chat-section.scss */
 .chat-box .msg-you .user-name {
   display: inline-block;
   background: none;
@@ -138,7 +189,6 @@ body, html {
   display: inline-block;
   width: 350px;
   padding: 0;
-  background: #f2f2f2;
 }
 
 /* line 1, ../../sass/connection.scss */

@@ -3,19 +3,22 @@
 
     header{
       height: 40px;
-      padding: 9px 15px;
-      background-color: #969696;
+
+      @include blue-grad-background();
       @include border-top-radius(5px);
 
       label{
         color: #ffffff;
+        padding-left: 10px;
+        padding-top: 9px;
       }
 
       i{
         float: right;
         color: rgba(34, 34, 34, 0.66);
-        font-size: 20px;
-        padding-left: 5px;
+        font-size: 17px;
+        padding-right: 7px;
+        padding-top: 4px;
         line-height: 22px;
       }
 
