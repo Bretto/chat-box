@@ -108,6 +108,8 @@ module.exports = function (socket) {
 
     socket.on('user:msg', function (data) {
 
+
+
         var tUser = usersDico[data.tId];
         var sId = tUser.sId;
 
@@ -115,7 +117,7 @@ module.exports = function (socket) {
         if(global.io.sockets.clients(data.roomId).length === 2){
             socket.broadcast.to(data.roomId).emit('user:msg', data);
         }
-        //else send a msgAlert to vendor
+        //else send a msgAlert to vendor or client...
         else{
             global.io.sockets.socket(sId).emit('msgAlert', data);
         }

@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined mixin 'box-shadow'.
-        on line 18 of /Users/Separ8/Sites/chat-box/sass/chat-footer.scss, in `box-shadow'
-        from line 18 of /Users/Separ8/Sites/chat-box/sass/chat-footer.scss
+        on line 14 of /Users/Separ8/Sites/chat-box/sass/chat-footer.scss, in `box-shadow'
+        from line 14 of /Users/Separ8/Sites/chat-box/sass/chat-footer.scss
 
 Backtrace:
-/Users/Separ8/Sites/chat-box/sass/chat-footer.scss:18:in `box-shadow'
-/Users/Separ8/Sites/chat-box/sass/chat-footer.scss:18
+/Users/Separ8/Sites/chat-box/sass/chat-footer.scss:14:in `box-shadow'
+/Users/Separ8/Sites/chat-box/sass/chat-footer.scss:14
 /Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:249:in `visit_mixin'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
@@ -116,4 +116,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'box-shadow'.\A         on line 18 of /Users/Separ8/Sites/chat-box/sass/chat-footer.scss, in `box-shadow'\A         from line 18 of /Users/Separ8/Sites/chat-box/sass/chat-footer.scss"; }
+  content: "Syntax error: Undefined mixin 'box-shadow'.\A         on line 14 of /Users/Separ8/Sites/chat-box/sass/chat-footer.scss, in `box-shadow'\A         from line 14 of /Users/Separ8/Sites/chat-box/sass/chat-footer.scss"; }

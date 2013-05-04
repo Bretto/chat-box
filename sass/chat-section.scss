@@ -3,10 +3,10 @@
   .ref{
     @include border-radius(10px);
     top: 1px;
-    left: 7px;
-    right: 7px;
+    left: 2px;
+    right: 2px;
     position: absolute;
-    background: rgba(255,255,255,.4);
+    background: rgba(255,255,255,.2);
     height: 14px;
   }
 
@@ -15,14 +15,14 @@
     margin: 0;
     overflow: scroll;
 
-    background-color: #ECF0F1;
+    background-color: $clouds;
     border-bottom: 1px solid #cdcdcd;
   }
 
   .msg-wrap{
     position: relative;
     display: inline-block;
-    @include border-radius(14px);
+    @include border-radius(8px);
 
     margin: 0;
     min-width: 100px;
@@ -32,6 +32,10 @@
     padding: 6px 10px;
     margin: 0;
     position: relative;
+    color: #ffffff;
+    font-family: helvetica;
+    font-size: 15px;
+    font-weight: 100;
   }
 
 
@@ -39,54 +43,62 @@
   .msg-me{
 
 
-
-    margin: 10px;
+    margin: 5px;
     margin-bottom: 40px;
     text-align: right;
 
 
     .msg-wrap{
-      background-color: #6CC5EE;
+      background-color: $turquoise;
     }
 
     .triangle{
       width: 0px;
       height: 0px;
       border-style: solid;
-      border-width: 20px 0px 0 15px;
-      border-color: #6CC5EE transparent transparent transparent;
+      border-width: 15px 0px 0 15px;
+      border-color: $turquoise transparent transparent transparent;
       float: right;
     }
 
     .user-name{
       float: right;
       background: none;
-      margin: 8px;
-      margin-top: 10px;
+      margin: 10px;
+      margin-left: 15px;
     }
 
   }
 
   .msg-you{
-    margin: 10px;
+    margin: 5px;
 
     .msg-wrap{
-      background-color: #afafaf;
+      background-color: $orange;
     }
 
     .triangle{
       display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
       width: 0px;
       height: 0px;
       border-style: solid;
-      border-width: 20px 15px 0 0;
-      border-color: #afafaf transparent transparent transparent;
+      border-width: 15px 15px 0 0;
+      border-color: $orange transparent transparent transparent;
+    }
+
+    .user-wrap{
+      position: relative;
+      display: inline-block;
     }
 
     .user-name{
       display: inline-block;
       background: none;
-      margin: 5px;
+      margin: 10px;
+      margin-right: 30px;
     }
   }
 

@@ -8,6 +8,14 @@ controllers.controller('ChatsCtrl', function ($scope, $rootScope, $timeout, $log
     $scope.chats = ChatsModel.chats;
 
     Socket.on('msgAlert', function (data) {
+
+        // reverse the to and from for
+        // bidirectional communication based on one room
+        var tId = data.fUser.id;
+        var fUser = ChatsModel.user;
+        data.fUser = fUser;
+        data.tId = tId;
+
         ChatsModel.chats.push(data);
         Socket.emit("joinChatRoom",data);
     });
