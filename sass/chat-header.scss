@@ -3,9 +3,7 @@
 
     header{
       height: 40px;
-
-      @include blue-grad-background();
-      @include border-top-radius(5px);
+      background: #2D3E4F;
 
       label{
         color: #ffffff;
@@ -15,10 +13,10 @@
 
       i{
         float: right;
-        color: rgba(34, 34, 34, 0.66);
-        font-size: 17px;
+        color: rgba(255, 255, 255, 0.36);
+        font-size: 25px;
         padding-right: 7px;
-        padding-top: 4px;
+        padding-top: 10px;
         line-height: 22px;
       }
 
