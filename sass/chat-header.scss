@@ -9,6 +9,10 @@
         color: #ffffff;
         padding-left: 8px;
         padding-top: 9px;
+        text-overflow: ellipsis;
+        width: 310px;
+        white-space: nowrap;
+        overflow: hidden;
       }
 
       i{

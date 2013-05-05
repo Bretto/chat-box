@@ -1,5 +1,10 @@
 .chat-box{
 
+  .chat-message{
+    clear: both;
+    padding: 5px;
+  }
+
   .ref{
     @include border-radius(10px);
     top: 1px;
@@ -26,6 +31,7 @@
 
     margin: 0;
     min-width: 100px;
+    max-width: 340px;
   }
 
   p{
@@ -35,7 +41,8 @@
     color: #ffffff;
     font-family: helvetica;
     font-size: 15px;
-    font-weight: 100;
+    word-wrap: break-word;
+    //font-weight: 100;
   }
 
 
@@ -43,9 +50,8 @@
   .msg-me{
 
 
-    margin: 5px;
-    margin-bottom: 40px;
-    text-align: right;
+    float: right;
+    clear: both;
 
 
     .msg-wrap{
@@ -66,12 +72,12 @@
       background: none;
       margin: 10px;
       margin-left: 15px;
+      color: $wet-asphalt;
     }
 
   }
 
   .msg-you{
-    margin: 5px;
 
     .msg-wrap{
       background-color: $orange;
@@ -99,7 +105,14 @@
       background: none;
       margin: 10px;
       margin-right: 30px;
+      color: $wet-asphalt;
     }
+
+    .date-time{
+      display: inline-block;
+      color: $silver;
+    }
+
   }
 
 
