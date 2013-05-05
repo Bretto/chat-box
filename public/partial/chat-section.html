@@ -1,3 +1,3 @@
 <ul class="chat-messages" ng-hide="data.isMin" auto-scroll>
-    <li class="chat-message" ng-include="'partial/msg-'+msg.type+'.html'" ng-repeat="msg in messages"></li>
+    <li class="chat-message repeat" ng-include="'partial/msg-'+msg.type+'.html'" ng-repeat="msg in messages" ng-animate="{enter: 'repeat-enter'}"></li>
 </ul>

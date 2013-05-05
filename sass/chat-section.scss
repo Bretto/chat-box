@@ -1,5 +1,22 @@
 .chat-box{
 
+  .repeat-enter-setup{
+    -webkit-transition:all linear 0.5s;
+    -moz-transition:all linear 0.5s;
+    -ms-transition:all linear 0.5s;
+    -o-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+  }
+
+  .repeat-enter-setup {
+    opacity:0;
+  }
+  .repeat-enter-setup.repeat-enter-start {
+    opacity:1;
+  }
+
+
+
   .chat-message{
     clear: both;
     padding: 5px;
@@ -22,6 +39,12 @@
 
     background-color: $clouds;
     border-bottom: 1px solid #cdcdcd;
+
+      -webkit-transition:all linear 0.5s;
+      -moz-transition:all linear 0.5s;
+      -ms-transition:all linear 0.5s;
+      -o-transition:all linear 0.5s;
+      transition:all linear 0.5s;
   }
 
   .msg-wrap{

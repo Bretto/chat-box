@@ -78,7 +78,8 @@ directives.directive('autoScroll', function ($log, Socket, ChatsModel) {
     function link(scope, elem, attr, ctrl) {
 
         scope.$watch(function(){return  elem[0].scrollHeight}, function(value){
-            elem[0].scrollTop = value;
+//            elem[0].scrollTop = value;
+            $(elem[0]).animate({ scrollTop: value }, 500);
         });
     }
 

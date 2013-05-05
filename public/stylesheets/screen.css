@@ -50,11 +50,27 @@ body, html {
 }
 
 /* line 3, ../../sass/chat-section.scss */
+.chat-box .repeat-enter-setup {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+/* line 11, ../../sass/chat-section.scss */
+.chat-box .repeat-enter-setup {
+  opacity: 0;
+}
+/* line 14, ../../sass/chat-section.scss */
+.chat-box .repeat-enter-setup.repeat-enter-start {
+  opacity: 1;
+}
+/* line 20, ../../sass/chat-section.scss */
 .chat-box .chat-message {
   clear: both;
   padding: 5px;
 }
-/* line 8, ../../sass/chat-section.scss */
+/* line 25, ../../sass/chat-section.scss */
 .chat-box .ref {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -68,15 +84,20 @@ body, html {
   background: rgba(255, 255, 255, 0.2);
   height: 14px;
 }
-/* line 18, ../../sass/chat-section.scss */
+/* line 35, ../../sass/chat-section.scss */
 .chat-box ul {
   height: 300px;
   margin: 0;
   overflow: scroll;
   background-color: #ecf0f1;
   border-bottom: 1px solid #cdcdcd;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
 }
-/* line 27, ../../sass/chat-section.scss */
+/* line 50, ../../sass/chat-section.scss */
 .chat-box .msg-wrap {
   position: relative;
   display: inline-block;
@@ -89,7 +110,7 @@ body, html {
   min-width: 100px;
   max-width: 340px;
 }
-/* line 37, ../../sass/chat-section.scss */
+/* line 60, ../../sass/chat-section.scss */
 .chat-box p {
   padding: 6px 10px;
   margin: 0;
@@ -99,16 +120,16 @@ body, html {
   font-size: 15px;
   word-wrap: break-word;
 }
-/* line 50, ../../sass/chat-section.scss */
+/* line 73, ../../sass/chat-section.scss */
 .chat-box .msg-me {
   float: right;
   clear: both;
 }
-/* line 57, ../../sass/chat-section.scss */
+/* line 80, ../../sass/chat-section.scss */
 .chat-box .msg-me .msg-wrap {
   background-color: #1abc9c;
 }
-/* line 61, ../../sass/chat-section.scss */
+/* line 84, ../../sass/chat-section.scss */
 .chat-box .msg-me .triangle {
   width: 0px;
   height: 0px;
@@ -117,7 +138,7 @@ body, html {
   border-color: #1abc9c transparent transparent transparent;
   float: right;
 }
-/* line 70, ../../sass/chat-section.scss */
+/* line 93, ../../sass/chat-section.scss */
 .chat-box .msg-me .user-name {
   float: right;
   background: none;
@@ -125,11 +146,11 @@ body, html {
   margin-left: 15px;
   color: #34495e;
 }
-/* line 82, ../../sass/chat-section.scss */
+/* line 105, ../../sass/chat-section.scss */
 .chat-box .msg-you .msg-wrap {
   background-color: #f39c12;
 }
-/* line 86, ../../sass/chat-section.scss */
+/* line 109, ../../sass/chat-section.scss */
 .chat-box .msg-you .triangle {
   display: inline-block;
   position: absolute;
@@ -141,12 +162,12 @@ body, html {
   border-width: 15px 15px 0 0;
   border-color: #f39c12 transparent transparent transparent;
 }
-/* line 98, ../../sass/chat-section.scss */
+/* line 121, ../../sass/chat-section.scss */
 .chat-box .msg-you .user-wrap {
   position: relative;
   display: inline-block;
 }
-/* line 103, ../../sass/chat-section.scss */
+/* line 126, ../../sass/chat-section.scss */
 .chat-box .msg-you .user-name {
   display: inline-block;
   background: none;
@@ -154,7 +175,7 @@ body, html {
   margin-right: 30px;
   color: #34495e;
 }
-/* line 111, ../../sass/chat-section.scss */
+/* line 134, ../../sass/chat-section.scss */
 .chat-box .msg-you .date-time {
   display: inline-block;
   color: #bdc3c7;
