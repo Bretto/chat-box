@@ -90,7 +90,7 @@ directives.directive('autoScroll', function ($log, Socket, ChatsModel) {
         scope.$watch(function(){return  elem[0].scrollHeight}, function(value){
 //            elem[0].scrollTop = value;
             msgList.clearQueue();
-            msgList.animate({ scrollTop: value }, 2000);
+            msgList.animate({ scrollTop: value }, 500);
         });
     }
 

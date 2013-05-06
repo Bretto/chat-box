@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a97f557-a77f-4798-815a-526bb7b2c884" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partial/chat-footer.html" afterPath="$PROJECT_DIR$/public/partial/chat-footer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/directives.js" afterPath="$PROJECT_DIR$/public/js/directives.js" />
     </list>
     <ignored path="chat-box.iws" />
@@ -106,7 +105,7 @@
       <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="5" selection-start="2537" selection-end="2537" vertical-scroll-proportion="2.017663">
+            <state line="96" column="12" selection-start="2488" selection-end="2488" vertical-scroll-proportion="0.51086956">
               <folding />
             </state>
           </provider>
@@ -654,7 +653,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="5" selection-start="2537" selection-end="2537" vertical-scroll-proportion="2.017663">
+        <state line="96" column="12" selection-start="2488" selection-end="2488" vertical-scroll-proportion="0.51086956">
           <folding />
         </state>
       </provider>
