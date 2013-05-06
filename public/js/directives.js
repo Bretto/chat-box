@@ -2,7 +2,7 @@
 
 var directives = angular.module('App.directives', []);
 
-directives.directive('chatBox', function ($log, Socket, ChatsModel) {
+directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
 
     function link(scope, elem, attr, ctrl) {
 
@@ -27,6 +27,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel) {
             if(angular.isDefined(scope.data.msg)){
                 addYouMsg(scope.data.msg);
             }
+
         }
 
         init();
@@ -91,6 +92,18 @@ directives.directive('autoScroll', function ($log, Socket, ChatsModel) {
             msgList.clearQueue();
             msgList.animate({ scrollTop: value }, 2000);
         });
+    }
+
+    return {
+        restrict: 'A',
+        link: link
+    }
+});
+
+directives.directive('hasFocus', function ($log, Socket, ChatsModel) {
+
+    function link(scope, elem, attr, ctrl) {
+        $(elem[0]).find(':input').focus();
     }
 
     return {

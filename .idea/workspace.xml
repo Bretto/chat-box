@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a97f557-a77f-4798-815a-526bb7b2c884" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-section.scssc" afterPath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-section.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/chat-section.scss" afterPath="$PROJECT_DIR$/sass/chat-section.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partial/chat-footer.html" afterPath="$PROJECT_DIR$/public/partial/chat-footer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/directives.js" afterPath="$PROJECT_DIR$/public/js/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chat-box.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +43,8 @@
     <file path="/connections.htm" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367282011094" ignored="false" />
     <file path="/connections.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367275285052" ignored="false" />
     <file path="/chat-msg.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367371741413" ignored="false" />
-    <file path="/directives.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367822297941" ignored="false" />
-    <file path="/chat-footer.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367382779785" ignored="false" />
+    <file path="/directives.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367823867049" ignored="false" />
+    <file path="/chat-footer.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367824584473" ignored="false" />
     <file path="/index.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367368262169" ignored="false" />
     <file path="/chat-header.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367541383673" ignored="false" />
     <file path="/connections.css" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367273481898" ignored="false" />
@@ -109,16 +106,16 @@
       <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="0" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.66528356">
+            <state line="99" column="5" selection-start="2537" selection-end="2537" vertical-scroll-proportion="2.017663">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="screen.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sass/screen.scss">
+      <file leaf-file-name="chat-footer.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/partial/chat-footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="3" column="9" selection-start="176" selection-end="176" vertical-scroll-proportion="-1.875">
               <folding />
             </state>
           </provider>
@@ -187,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/partial/msg-info.html" />
         <option value="$PROJECT_DIR$/public/partial/chat-header.html" />
         <option value="$PROJECT_DIR$/sass/chat-box.scss" />
         <option value="$PROJECT_DIR$/sass/chat-footer.scss" />
@@ -202,6 +198,7 @@
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/sass/base.scss" />
         <option value="$PROJECT_DIR$/sass/chat-section.scss" />
+        <option value="$PROJECT_DIR$/public/partial/chat-footer.html" />
         <option value="$PROJECT_DIR$/public/js/directives.js" />
       </list>
     </option>
@@ -470,7 +467,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3473054" sideWeight="0.74809885" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2804391" sideWeight="0.74809885" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25190115" sideWeight="0.998004" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -548,15 +545,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/libs/angular.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="0" selection-start="97458" selection-end="97458" vertical-scroll-proportion="3.5892117">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/partial/chat-section.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="-1.875">
@@ -657,9 +645,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/partial/chat-footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="9" selection-start="176" selection-end="176" vertical-scroll-proportion="-1.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="0" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.66528356">
+        <state line="99" column="5" selection-start="2537" selection-end="2537" vertical-scroll-proportion="2.017663">
           <folding />
         </state>
       </provider>
