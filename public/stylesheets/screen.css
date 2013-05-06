@@ -42,11 +42,15 @@ body, html {
 /* line 18, ../../sass/chat-header.scss */
 .chat-box header i {
   float: right;
-  color: rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.2);
   font-size: 25px;
   padding-right: 7px;
   padding-top: 10px;
   line-height: 22px;
+}
+/* line 26, ../../sass/chat-header.scss */
+.chat-box header i:hover {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* line 3, ../../sass/chat-section.scss */
@@ -120,6 +124,7 @@ body, html {
   font-family: Lato, helvetica;
   font-size: 15px;
   word-wrap: break-word;
+  font-weight: lighter;
 }
 /* line 74, ../../sass/chat-section.scss */
 .chat-box .msg-me {
@@ -140,7 +145,7 @@ body, html {
   float: right;
 }
 /* line 94, ../../sass/chat-section.scss */
-.chat-box .msg-me .user-name {
+.chat-box .msg-me .username {
   float: right;
   background: none;
   margin: 10px;
@@ -169,7 +174,7 @@ body, html {
   display: inline-block;
 }
 /* line 127, ../../sass/chat-section.scss */
-.chat-box .msg-you .user-name {
+.chat-box .msg-you .username {
   display: inline-block;
   background: none;
   margin: 10px;
@@ -180,6 +185,18 @@ body, html {
 .chat-box .msg-you .date-time {
   display: inline-block;
   color: #bdc3c7;
+}
+/* line 142, ../../sass/chat-section.scss */
+.chat-box .msg-info {
+  text-align: center;
+}
+/* line 146, ../../sass/chat-section.scss */
+.chat-box .msg-info .msg-wrap {
+  background-color: rgba(189, 195, 199, 0.2);
+}
+/* line 150, ../../sass/chat-section.scss */
+.chat-box .msg-info p {
+  color: rgba(52, 73, 94, 0.5);
 }
 
 /* line 6, ../../sass/chat-footer.scss */

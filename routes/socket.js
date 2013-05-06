@@ -100,6 +100,14 @@ module.exports = function (socket) {
 
     socket.on('joinChatRoom', function(data){
         socket.join(data.roomId);
+
+        var sId = usersDico[data.tUser.id].sId;
+        var tUser = data.fUser;
+        var fUser = users.getUsersDico()[data.tUser.id];
+        data.fUser = fUser;
+        data.tUser = tUser;
+
+        socket.broadcast.to(data.roomId).emit('joinChatRoom', data);
     });
 
     socket.on('leaveChatRoom', function(data){
@@ -108,13 +116,15 @@ module.exports = function (socket) {
 
     socket.on('user:msg', function (data) {
 
-
-
-        var tUser = usersDico[data.tId];
-        var sId = tUser.sId;
+        var sId = usersDico[data.tUser.id].sId;
+        var tUser = data.fUser;
+        var fUser = users.getUsersDico()[data.tUser.id];
+        data.fUser = fUser;
+        data.tUser = tUser;
 
         //if client and vendor are in the room send msg
         if(global.io.sockets.clients(data.roomId).length === 2){
+//            data.tUser.name = users.getUsersDico()[data.tUser.id].name;
             socket.broadcast.to(data.roomId).emit('user:msg', data);
         }
         //else send a msgAlert to vendor or client...

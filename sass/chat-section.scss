@@ -66,7 +66,7 @@
     font-family: Lato, helvetica;
     font-size: 15px;
     word-wrap: break-word;
-    //font-weight: 100;
+    font-weight: lighter;
   }
 
 
@@ -91,7 +91,7 @@
       float: right;
     }
 
-    .user-name{
+    .username{
       float: right;
       background: none;
       margin: 10px;
@@ -124,7 +124,7 @@
       display: inline-block;
     }
 
-    .user-name{
+    .username{
       display: inline-block;
       background: none;
       margin: 10px;
@@ -135,6 +135,20 @@
     .date-time{
       display: inline-block;
       color: $silver;
+    }
+
+  }
+
+  .msg-info{
+
+    text-align: center;
+
+    .msg-wrap{
+      background-color: rgba($silver,.2);
+    }
+
+    p{
+      color: rgba($wet-asphalt,.5);
     }
 
   }

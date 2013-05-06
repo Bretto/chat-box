@@ -7,14 +7,16 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
     function link(scope, elem, attr, ctrl) {
 
         scope.messages = [];
+        scope.username = '';
 
         function addMeMsg(msg){
             var msg = {type:"me", message:msg};
             scope.messages.push(msg);
         }
 
-        function addYouMsg(msg){
-            var msg = {type:"you", message:msg};
+        function addYouMsg(data){
+            var msg = {type:"you", message:data.msg};
+            scope.tUsername = data.tUser.name;
             scope.messages.push(msg);
         }
 
@@ -25,16 +27,26 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
 
         function init(){
             if(angular.isDefined(scope.data.msg)){
-                addYouMsg(scope.data.msg);
+                addYouMsg(scope.data);
             }
-
+            scope.username = scope.data.fUser.name;
         }
 
         init();
 
         Socket.on('user:msg', function (data) {
-            if(data.roomId === scope.data.roomId)
-                addYouMsg(data.msg);
+            if(data.roomId === scope.data.roomId){
+                addYouMsg(data);
+            }
+
+        });
+
+        Socket.on('joinChatRoom', function (data) {
+            if(data.roomId === scope.data.roomId){
+                var msg = data.tUser.name + ' has join the room';
+                addInfoMsg(msg);
+            }
+
         });
 
         scope.onSendMsg = function(e){
@@ -42,13 +54,13 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
             addMeMsg(scope.data.sendMsg);
 
             var data = {
-                title:scope.data.title,
-                fUser:scope.data.fUser,
-                roomId:scope.data.roomId,
-                tId:scope.data.tId,
-                aId:scope.data.aId,
-                msg:scope.data.sendMsg
-            };
+                        fUser:scope.data.fUser,
+                        tUser:scope.data.tUser,
+                        aId:scope.data.aId,
+                        title:scope.data.title,
+                        roomId:scope.data.roomId,
+                        msg:scope.data.sendMsg
+                       };
 
             Socket.emit("user:msg", data);
             scope.data.sendMsg = '';

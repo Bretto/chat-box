@@ -17,11 +17,15 @@
 
       i{
         float: right;
-        color: rgba(255, 255, 255, 0.36);
+        color: rgba(#fff, 0.2);
         font-size: 25px;
         padding-right: 7px;
         padding-top: 10px;
         line-height: 22px;
+
+        &:hover{
+          color: rgba(#fff, 0.5);
+        }
       }
 
     }

@@ -7,8 +7,8 @@ services.factory('ChatsModel', function ($http, $log, $rootScope, $routeParams, 
     var user = {};
     var chats = [];
 
-    var makeRoomId = function(data){
-        var id = 'vid'+ data.tId + 'aid' + data.aId + 'cid' + data.fUser.id;
+    var makeRoomId = function(vid,aid,cid){
+        var id = 'vid'+ vid + 'aid' + aid + 'cid' + cid;
         return id;
     }
 

@@ -16,9 +16,13 @@
 /* line 18, ../../sass/chat-header.scss */
 .chat-box header i {
   float: right;
-  color: rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.2);
   font-size: 25px;
   padding-right: 7px;
   padding-top: 10px;
   line-height: 22px;
+}
+/* line 26, ../../sass/chat-header.scss */
+.chat-box header i:hover {
+  color: rgba(255, 255, 255, 0.5);
 }
