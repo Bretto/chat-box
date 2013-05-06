@@ -36,6 +36,7 @@
     height: 300px;
     margin: 0;
     overflow: scroll;
+    overflow-x: hidden;
 
     background-color: $clouds;
     border-bottom: 1px solid #cdcdcd;
@@ -62,7 +63,7 @@
     margin: 0;
     position: relative;
     color: #ffffff;
-    font-family: helvetica;
+    font-family: Lato, helvetica;
     font-size: 15px;
     word-wrap: break-word;
     //font-weight: 100;

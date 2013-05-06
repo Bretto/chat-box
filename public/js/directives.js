@@ -77,9 +77,19 @@ directives.directive('autoScroll', function ($log, Socket, ChatsModel) {
 
     function link(scope, elem, attr, ctrl) {
 
+        var msgList = $(elem[0]);
+
+        msgList.bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(e){
+            if ( e.which > 0 || e.type === "mousedown" || e.type === "mousewheel"){
+                msgList.clearQueue();
+                msgList.stop();
+            }
+        });
+
         scope.$watch(function(){return  elem[0].scrollHeight}, function(value){
 //            elem[0].scrollTop = value;
-            $(elem[0]).animate({ scrollTop: value }, 500);
+            msgList.clearQueue();
+            msgList.animate({ scrollTop: value }, 2000);
         });
     }
 
