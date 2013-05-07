@@ -15,7 +15,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         }
 
         function addYouMsg(data){
-            var msg = {type:"you", message:data.msg};
+            var msg = {type:"you", message:data.msg, dateTime:data.dateTime};
             scope.tUsername = data.tUser.name;
             scope.messages.push(msg);
         }
@@ -122,7 +122,7 @@ directives.directive('autoScroll', function ($log, Socket, ChatsModel) {
 directives.directive('hasFocus', function ($log, Socket, ChatsModel) {
 
     function link(scope, elem, attr, ctrl) {
-        $(elem[0]).find(':input').focus();
+        $(elem).focus();
     }
 
     return {

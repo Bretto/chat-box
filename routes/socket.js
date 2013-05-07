@@ -117,11 +117,6 @@ module.exports = function (socket) {
         socket.leave(data.roomId);
 
         delete user.rooms[data.roomId];
-//        var tUser = data.fUser;
-//        var fUser = users.getUsersDico()[data.tUser.id];
-//        data.fUser = fUser;
-//        data.tUser = tUser;
-
         var leaveData = {name:user.name, roomId:data.roomId}
 
         socket.broadcast.to(data.roomId).emit('leaveChatRoom', leaveData);
@@ -138,9 +133,11 @@ module.exports = function (socket) {
         data.fUser = fUser;
         data.tUser = tUser;
 
+        var dateTime = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+        data.dateTime = dateTime;
+
         //if client and vendor are in the room send msg
         if(global.io.sockets.clients(data.roomId).length === 2){
-//            data.tUser.name = users.getUsersDico()[data.tUser.id].name;
             socket.broadcast.to(data.roomId).emit('user:msg', data);
         }
         //else send a msgAlert to vendor or client...
