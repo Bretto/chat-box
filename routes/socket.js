@@ -93,6 +93,7 @@ module.exports = function (socket) {
 
     var user = userNames.getUser();
     user.sId = socket.id;
+    user.rooms = {};
     var usersDico = users.getUsersDico();
     usersDico[user.id] = user;
 
@@ -101,7 +102,7 @@ module.exports = function (socket) {
     socket.on('joinChatRoom', function(data){
         socket.join(data.roomId);
 
-        var sId = usersDico[data.tUser.id].sId;
+        user.rooms[data.roomId] = data.roomId;
         var tUser = data.fUser;
         var fUser = users.getUsersDico()[data.tUser.id];
         data.fUser = fUser;
@@ -110,11 +111,26 @@ module.exports = function (socket) {
         socket.broadcast.to(data.roomId).emit('joinChatRoom', data);
     });
 
+
+
     socket.on('leaveChatRoom', function(data){
         socket.leave(data.roomId);
+
+        delete user.rooms[data.roomId];
+//        var tUser = data.fUser;
+//        var fUser = users.getUsersDico()[data.tUser.id];
+//        data.fUser = fUser;
+//        data.tUser = tUser;
+
+        var leaveData = {name:user.name, roomId:data.roomId}
+
+        socket.broadcast.to(data.roomId).emit('leaveChatRoom', leaveData);
     });
 
     socket.on('user:msg', function (data) {
+
+        //safeguard
+        if(!usersDico[data.tUser.id])return;
 
         var sId = usersDico[data.tUser.id].sId;
         var tUser = data.fUser;
@@ -142,10 +158,24 @@ module.exports = function (socket) {
 
 
     socket.on('disconnect', function () {
+
 //        socket.broadcast.emit('user:left', {
 //            name: user.name
 //        });
+
+        for(room in user.rooms){
+            socket.broadcast.to(room).emit('leaveChatRoom', {name:user.name, roomId:room});
+        }
+
         users.destroy(user.id);
         userNames.free(user.name);
+
+//        var tUser = data.fUser;
+//        var fUser = users.getUsersDico()[data.tUser.id];
+//        data.fUser = fUser;
+//        data.tUser = tUser;
+//
+
+
     });
 };

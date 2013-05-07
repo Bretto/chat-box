@@ -46,6 +46,13 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
                 var msg = data.tUser.name + ' has join the room';
                 addInfoMsg(msg);
             }
+        });
+
+        Socket.on('leaveChatRoom', function (data) {
+            if(data.roomId === scope.data.roomId){
+                var msg = data.name + ' has left the room';
+                addInfoMsg(msg);
+            }
 
         });
 
