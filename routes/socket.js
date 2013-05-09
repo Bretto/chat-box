@@ -176,7 +176,7 @@ module.exports = function (socket) {
         if(!user)return;
 
         for(room in user.rooms){
-            socket.broadcast.to(room).emit('user:leave', {name:user.name, roomId:room});
+            socket.broadcast.to(room).emit('user:leave', {user:user, roomId:room});
         }
 
         users.destroy(user.id);

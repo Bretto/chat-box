@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a97f557-a77f-4798-815a-526bb7b2c884" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-header.scssc" afterPath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-header.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/chat-header.css" afterPath="$PROJECT_DIR$/public/stylesheets/chat-header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partial/chat-header.html" afterPath="$PROJECT_DIR$/public/partial/chat-header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/chat-header.scss" afterPath="$PROJECT_DIR$/sass/chat-header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers.js" afterPath="$PROJECT_DIR$/public/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/directives.js" afterPath="$PROJECT_DIR$/public/js/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/socket.js" afterPath="$PROJECT_DIR$/routes/socket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partial/user.html" afterPath="$PROJECT_DIR$/public/partial/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chat-box.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +37,7 @@
     <file path="/chats-box.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367400924639" ignored="false" />
     <file path="/connections.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367048082583" ignored="false" />
     <file path="/connection.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367034293825" ignored="false" />
-    <file path="/socket.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368061415538" ignored="false" />
+    <file path="/socket.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368062645227" ignored="false" />
     <file path="/fragment.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368008890052" ignored="false" />
     <file path="/connections.htm" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367282011094" ignored="false" />
     <file path="/connections.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367275285052" ignored="false" />
@@ -87,7 +78,7 @@
       <file leaf-file-name="socket.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/socket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="36" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.24858756">
+            <state line="171" column="0" selection-start="4160" selection-end="4160" vertical-scroll-proportion="0.69350284">
               <folding />
             </state>
           </provider>
@@ -141,7 +132,7 @@
       <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="38" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.0">
+            <state line="55" column="40" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -452,7 +443,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1025" height="1170" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -635,14 +626,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="38" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.0">
+        <state line="55" column="40" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/socket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="36" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.24858756">
+        <state line="171" column="0" selection-start="4160" selection-end="4160" vertical-scroll-proportion="0.69350284">
           <folding />
         </state>
       </provider>
