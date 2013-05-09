@@ -49,6 +49,11 @@ controllers.controller('AnnoncesCtrl', function ($scope, $rootScope, $timeout, $
 
 controllers.controller('UserCtrl', function ($scope, $rootScope, $timeout, $log, ChatsModel, Socket, $http){
 
+    $scope.$watch(function(){return $scope.chatable }, function(value){
+       $log.info(value);
+        Socket.emit("user:chatable", value);
+    });
+
     Socket.on('user:connect', function (user) {
         $log.info('user:connect');
         ChatsModel.user = user;
@@ -62,10 +67,6 @@ controllers.controller('UserCtrl', function ($scope, $rootScope, $timeout, $log,
     Socket.on('user:disconnect', function (data) {
         $log.info('user:disconnect');
     });
-
-    $scope.onChatEnable = function(){
-        Socket.emit("user:chatable", ($scope.chatable)? false:true);
-    }
 
 });
 
