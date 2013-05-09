@@ -29,7 +29,10 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
             if(angular.isDefined(scope.data.msg)){
                 addYouMsg(scope.data);
             }
-            scope.username = scope.data.fUser.name;
+            scope.username = ChatsModel.user.name;
+            Socket.emit("user:join",scope.data, function(data){
+                scope.data.chatable = data.chatable;
+            });
         }
 
         init();
@@ -38,22 +41,27 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
             if(data.roomId === scope.data.roomId){
                 addYouMsg(data);
             }
-
         });
 
-        Socket.on('joinChatRoom', function (data) {
-            if(data.roomId === scope.data.roomId){
-                var msg = data.tUser.name + ' has join the room';
+        Socket.on('user:join', function (joinData) {
+            if(joinData.roomId === scope.data.roomId){
+                var msg = joinData.user.name + ' has join the room';
                 addInfoMsg(msg);
             }
         });
 
-        Socket.on('leaveChatRoom', function (data) {
-            if(data.roomId === scope.data.roomId){
-                var msg = data.name + ' has left the room';
+        Socket.on('user:leave', function (leaveData) {
+            if(leaveData.roomId === scope.data.roomId){
+                scope.data.chatable = false;
+                var msg = leaveData.user.name + ' has left the room';
                 addInfoMsg(msg);
             }
+        });
 
+        Socket.on('user:chatable', function (data) {
+            if(data.roomId === scope.data.roomId){
+                scope.data.chatable = data.chatable;
+            }
         });
 
         scope.onSendMsg = function(e){
@@ -61,7 +69,6 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
             addMeMsg(scope.data.sendMsg);
 
             var data = {
-                        fUser:scope.data.fUser,
                         tUser:scope.data.tUser,
                         aId:scope.data.aId,
                         title:scope.data.title,
@@ -80,7 +87,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         scope.onClose = function(){
             var chat = ChatsModel.getChatBox(scope.data.roomId);
             ChatsModel.destroy(chat);
-            Socket.emit("leaveChatRoom", scope.data);
+            Socket.emit("user:leave", scope.data.roomId);
         }
 
     }

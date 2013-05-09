@@ -9,7 +9,6 @@ controllers.controller('ChatsCtrl', function ($scope, $rootScope, $timeout, $log
 
     Socket.on('msgAlert', function (data) {
         ChatsModel.chats.push(data);
-        Socket.emit("joinChatRoom",data);
     });
 });
 
@@ -34,7 +33,6 @@ controllers.controller('AnnoncesCtrl', function ($scope, $rootScope, $timeout, $
         if(annonce.uId === ChatsModel.user.id)return;
 
         var data = {
-                        fUser:ChatsModel.user,
                         tUser:{name:'unknown', id:annonce.uId},
                         aId:annonce.aId,
                         title:annonce.title,
@@ -45,7 +43,7 @@ controllers.controller('AnnoncesCtrl', function ($scope, $rootScope, $timeout, $
         if(ChatsModel.getChatBox(data.roomId))return;
 
         ChatsModel.chats.push(data);
-        Socket.emit("joinChatRoom",data);
+
     }
 });
 
@@ -66,9 +64,8 @@ controllers.controller('UserCtrl', function ($scope, $rootScope, $timeout, $log,
     });
 
     $scope.onChatEnable = function(){
-        var data = { userId:$scope.name };
-        data.chatEnable = ($scope.chatEnable)? true:false;
-        Socket.emit("user:chatEnable", data);
+
+        Socket.emit("user:chatable", ($scope.chatable)? true:false);
     }
 
 });

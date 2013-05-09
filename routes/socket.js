@@ -91,88 +91,98 @@ var userNames = (function () {
 // export function for listening to the socket
 module.exports = function (socket) {
 
-    var user = userNames.getUser();
-    user.sId = socket.id;
-    user.rooms = {};
-    var usersDico = users.getUsersDico();
-    usersDico[user.id] = user;
+    var user;
+    var usersDico;
 
-    socket.emit('user:connect', user);
+    var init = function(){
+        user = userNames.getUser();
+        user.sId = socket.id;
+        user.rooms = {};
+        user.chatable = false;
+        usersDico = users.getUsersDico();
+        usersDico[user.id] = user;
 
-    socket.on('joinChatRoom', function(data){
+        socket.emit('user:connect', user);
+    }
+
+    socket.on('user:join', function(data, fn){
         socket.join(data.roomId);
-
         user.rooms[data.roomId] = data.roomId;
-        var tUser = data.fUser;
-        var fUser = users.getUsersDico()[data.tUser.id];
-        data.fUser = fUser;
-        data.tUser = tUser;
 
-        socket.broadcast.to(data.roomId).emit('joinChatRoom', data);
+
+        var joinData = {user:user, roomId:data.roomId};
+        socket.broadcast.to(data.roomId).emit('user:join', joinData);
+
+        var chatable = false;
+        if(usersDico[data.tUser.id] && usersDico[data.tUser.id].chatable){
+            chatable = true;
+            var sId = usersDico[data.tUser.id].sId;
+            // ask user to join room
+            if(global.io.sockets.clients(data.roomId).length === 1){
+                global.io.sockets.socket(sId).emit('msgAlert', data);
+            }else{
+                socket.broadcast.to(data.roomId).emit('user:chatable', {chatable:chatable, roomId:data.roomId});
+            }
+        }
+
+        fn({chatable:chatable});
     });
 
-
-
-    socket.on('leaveChatRoom', function(data){
-        socket.leave(data.roomId);
-
-        delete user.rooms[data.roomId];
-        var leaveData = {name:user.name, roomId:data.roomId}
-
-        socket.broadcast.to(data.roomId).emit('leaveChatRoom', leaveData);
+    socket.on('user:leave', function(roomId){
+        socket.leave(roomId);
+        delete user.rooms[roomId];
+        var leaveData = {user:user, roomId:roomId}
+        socket.broadcast.to(roomId).emit('user:leave', leaveData);
     });
 
     socket.on('user:msg', function (data) {
 
-        //safeguard
+        //Safeguard
         if(!usersDico[data.tUser.id])return;
 
-        var sId = usersDico[data.tUser.id].sId;
-        var tUser = data.fUser;
-        var fUser = users.getUsersDico()[data.tUser.id];
-        data.fUser = fUser;
-        data.tUser = tUser;
+        var tUser = usersDico[data.tUser.id];
+        var sId = tUser.sId;
 
         var dateTime = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
         data.dateTime = dateTime;
+        data.tUser = user;
 
-        //if client and vendor are in the room send msg
-        if(global.io.sockets.clients(data.roomId).length === 2){
-            socket.broadcast.to(data.roomId).emit('user:msg', data);
-        }
-        //else send a msgAlert to vendor or client...
-        else{
-            global.io.sockets.socket(sId).emit('msgAlert', data);
+
+        //TODO save msg to mySQL
+
+        if(tUser.chatable){
+            //if client and vendor are in the room send msg
+            if(global.io.sockets.clients(data.roomId).length === 2){
+                socket.broadcast.to(data.roomId).emit('user:msg', data);
+            }
+            //else send a msgAlert to vendor or client...
+            else{
+                global.io.sockets.socket(sId).emit('msgAlert', data);
+            }
         }
     });
 
-//    socket.on('user:chatEnable', function (data) {
-//        var receiverSocketId = socketConnections.getSocketId(data.userId);
-//        var connectionsDico = socketConnections.getConnectionsDico();
-//        var connection = connectionsDico[receiverSocketId];
-//        connection.chatEnable = data.chatEnable;
-//    });
+    socket.on('user:chatable', function (chatable) {
+        user.chatable = chatable;
+
+        for(room in user.rooms){
+            socket.broadcast.to(room).emit('user:chatable', {chatable:chatable, roomId:room});
+        }
+    });
 
 
     socket.on('disconnect', function () {
 
-//        socket.broadcast.emit('user:left', {
-//            name: user.name
-//        });
+        if(!user)return;
 
         for(room in user.rooms){
-            socket.broadcast.to(room).emit('leaveChatRoom', {name:user.name, roomId:room});
+            socket.broadcast.to(room).emit('user:leave', {name:user.name, roomId:room});
         }
 
         users.destroy(user.id);
         userNames.free(user.name);
 
-//        var tUser = data.fUser;
-//        var fUser = users.getUsersDico()[data.tUser.id];
-//        data.fUser = fUser;
-//        data.tUser = tUser;
-//
-
-
     });
+
+    init();
 };
