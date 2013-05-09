@@ -8,6 +8,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
 
         scope.messages = [];
         scope.username = '';
+        scope.msgCnt = 0;
 
         function addMeMsg(msg){
             var msg = {type:"me", message:msg};
@@ -40,6 +41,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         Socket.on('user:msg', function (data) {
             if(data.roomId === scope.data.roomId){
                 scope.data.chatable = true;
+                scope.msgCnt += 1;
                 addYouMsg(data);
             }
         });
@@ -84,9 +86,20 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
             scope.data.sendMsg = '';
         }
 
-        scope.onMin = function(){
-            scope.data.isMin = (scope.data.isMin === true)? false : true;
+        scope.isCntVisible = function(){
+            return (scope.data.isMin && scope.msgCnt > 0)? true : false;
         }
+
+        scope.onMin = function(){
+            var isMin = (scope.data.isMin === true)? false : true;
+            scope.data.isMin = isMin;
+
+            if(isMin){
+                scope.msgCnt = 0;
+            }
+        }
+
+
 
         scope.onClose = function(){
             var chat = ChatsModel.getChatBox(scope.data.roomId);

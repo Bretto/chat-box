@@ -7,13 +7,15 @@
       position: relative;
 
       label{
+        display: inline-block;
         color: #ffffff;
         padding-left: 8px;
         padding-top: 9px;
         text-overflow: ellipsis;
-        width: 310px;
+        width: 274px;
         white-space: nowrap;
         overflow: hidden;
+        font-weight: lighter;
       }
 
       i{
@@ -43,7 +45,28 @@
       }
 
       .chatable{
-        border-color: $turquoise transparent transparent transparent;
+        border-color: $orange transparent transparent transparent;
+      }
+
+      .new-msg-cnt{
+        float: right;
+        margin-top: 6px;
+        margin-right: 6px;
+        display: inline-block;
+        padding: 2px 4px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 22px;
+        color: #ffffff;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        white-space: nowrap;
+        vertical-align: baseline;
+        padding-right: 9px;
+        padding-left: 9px;
+        @include border-radius(30px);
+        font-weight: lighter;
+
+        background-color: $orange;
       }
 
     }
