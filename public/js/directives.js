@@ -101,7 +101,8 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
 
 
 
-        scope.onClose = function(){
+        scope.onClose = function(e){
+            //e.stopImmediatePropagation();
             var chat = ChatsModel.getChatBox(scope.data.roomId);
             ChatsModel.destroy(chat);
             Socket.emit("user:leave", scope.data.roomId);

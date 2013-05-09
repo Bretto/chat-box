@@ -114,16 +114,21 @@ module.exports = function (socket) {
         socket.broadcast.to(data.roomId).emit('user:join', joinData);
 
         var chatable = false;
-        if(usersDico[data.tUser.id] && usersDico[data.tUser.id].chatable){
-            chatable = true;
-            var sId = usersDico[data.tUser.id].sId;
-            // ask user to join room
-            if(global.io.sockets.clients(data.roomId).length === 1){
-                global.io.sockets.socket(sId).emit('msgAlert', data);
-            }else{
-                socket.broadcast.to(data.roomId).emit('user:chatable', {chatable:chatable, roomId:data.roomId});
-            }
+
+        if(usersDico[data.tUser.id]){
+            chatable = usersDico[data.tUser.id].chatable;
         }
+
+//        if(usersDico[data.tUser.id] && usersDico[data.tUser.id].chatable){
+//            chatable = true;
+//            var sId = usersDico[data.tUser.id].sId;
+//            // ask user to join room
+//            if(global.io.sockets.clients(data.roomId).length === 1){
+//                global.io.sockets.socket(sId).emit('msgAlert', data);
+//            }else{
+//                socket.broadcast.to(data.roomId).emit('user:chatable', {chatable:chatable, roomId:data.roomId});
+//            }
+//        }
 
         fn({chatable:chatable});
     });
