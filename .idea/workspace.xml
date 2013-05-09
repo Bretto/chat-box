@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a97f557-a77f-4798-815a-526bb7b2c884" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-section.scssc" afterPath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-section.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partial/chat-header.html" afterPath="$PROJECT_DIR$/public/partial/chat-header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/chat-section.scss" afterPath="$PROJECT_DIR$/sass/chat-section.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/socket.js" afterPath="$PROJECT_DIR$/routes/socket.js" />
     </list>
     <ignored path="chat-box.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,10 +76,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="socket.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="socket.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/socket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="0" selection-start="2502" selection-end="3010" vertical-scroll-proportion="0.0">
+            <state line="111" column="0" selection-start="2236" selection-end="2236" vertical-scroll-proportion="2.368421">
               <folding />
             </state>
           </provider>
@@ -107,10 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat-header.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="chat-header.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/partial/chat-header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="9" selection-start="402" selection-end="402" vertical-scroll-proportion="0.13254787">
+            <state line="6" column="9" selection-start="402" selection-end="402" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
@@ -201,9 +197,9 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/js/directives.js" />
-        <option value="$PROJECT_DIR$/routes/socket.js" />
         <option value="$PROJECT_DIR$/sass/chat-section.scss" />
         <option value="$PROJECT_DIR$/public/partial/chat-header.html" />
+        <option value="$PROJECT_DIR$/routes/socket.js" />
       </list>
     </option>
   </component>
@@ -601,23 +597,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/socket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="0" selection-start="2502" selection-end="3010" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/chat-header.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="8" selection-start="1287" selection-end="1329" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="14" selection-start="2996" selection-end="2996" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -638,7 +620,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/partial/chat-header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="9" selection-start="402" selection-end="402" vertical-scroll-proportion="0.13254787">
+        <state line="6" column="9" selection-start="402" selection-end="402" vertical-scroll-proportion="-3.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="14" selection-start="2996" selection-end="2996" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/socket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="0" selection-start="2236" selection-end="2236" vertical-scroll-proportion="2.368421">
           <folding />
         </state>
       </provider>
