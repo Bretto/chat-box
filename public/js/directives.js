@@ -39,12 +39,14 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
 
         Socket.on('user:msg', function (data) {
             if(data.roomId === scope.data.roomId){
+                scope.data.chatable = true;
                 addYouMsg(data);
             }
         });
 
         Socket.on('user:join', function (joinData) {
             if(joinData.roomId === scope.data.roomId){
+                scope.data.chatable = true;
                 var msg = joinData.user.name + ' has join the room';
                 addInfoMsg(msg);
             }
@@ -66,6 +68,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
 
         scope.onSendMsg = function(e){
 
+            if(scope.data.sendMsg === '')return;
             addMeMsg(scope.data.sendMsg);
 
             var data = {
@@ -75,6 +78,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
                         roomId:scope.data.roomId,
                         msg:scope.data.sendMsg
                        };
+
 
             Socket.emit("user:msg", data);
             scope.data.sendMsg = '';
@@ -126,10 +130,18 @@ directives.directive('autoScroll', function ($log, Socket, ChatsModel) {
     }
 });
 
-directives.directive('hasFocus', function ($log, Socket, ChatsModel) {
+directives.directive('hasFocus', function ($log, $timeout) {
 
     function link(scope, elem, attr, ctrl) {
         $(elem).focus();
+
+        scope.$watch(function(){return  scope.data.isMin}, function(value){
+            if(!value){
+                $timeout(function(){
+                    $(elem).focus();
+                },0)
+            }
+        });
     }
 
     return {
