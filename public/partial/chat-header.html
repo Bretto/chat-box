@@ -2,6 +2,6 @@
     <i class="right gen-enclosed foundicon-remove" ng-click="onClose($event)"></i>
     <!--<i class="right gen-enclosed foundicon-minus"></i>-->
     <label>{{data.title}}</label>
-    <div class="triangle" ng-class="{chatable: data.chatable}" ></div>
+    <a title="La personne est connecté / déconnecté" class="triangle" ng-class="{chatable: data.chatable}" ></a>
     <span class="new-msg-cnt" ng-show="isCntVisible()">{{msgCnt}}</span>
 </header>
