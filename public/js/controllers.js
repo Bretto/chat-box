@@ -64,8 +64,7 @@ controllers.controller('UserCtrl', function ($scope, $rootScope, $timeout, $log,
     });
 
     $scope.onChatEnable = function(){
-
-        Socket.emit("user:chatable", ($scope.chatable)? true:false);
+        Socket.emit("user:chatable", ($scope.chatable)? false:true);
     }
 
 });
