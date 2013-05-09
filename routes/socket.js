@@ -1,5 +1,5 @@
 
-
+var moment = require('moment');
 
 var users = (function () {
 
@@ -143,7 +143,7 @@ module.exports = function (socket) {
         var tUser = usersDico[data.tUser.id];
         var sId = tUser.sId;
 
-        var dateTime = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+        var dateTime = moment().format("D/M/YYYY HH:MM");
         data.dateTime = dateTime;
         data.tUser = user;
 
