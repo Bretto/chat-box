@@ -1,6 +1,7 @@
 
 var moment = require('moment');
 
+
 var users = (function () {
 
     var usersDico = {};
@@ -105,6 +106,8 @@ module.exports = function (socket) {
         socket.emit('user:connect', user);
     }
 
+
+
     socket.on('user:join', function(data, fn){
         socket.join(data.roomId);
         user.rooms[data.roomId] = data.roomId;
@@ -128,10 +131,19 @@ module.exports = function (socket) {
         socket.broadcast.to(roomId).emit('user:leave', leaveData);
     });
 
-    socket.on('user:msg', function (data) {
+    var domainUserMsg = domain.create();
+
+    domainUserMsg.on('error', function(er) {
+        console.error('Error [user:msg]:', er);
+    });
+
+
+    socket.on('user:msg', domainUserMsg.intercept(function (data) {
 
         //Safeguard
         if(!usersDico[data.tUser.id])return;
+
+        var myError = data.abc();
 
         var tUser = usersDico[data.tUser.id];
         var sId = tUser.sId;
@@ -153,7 +165,8 @@ module.exports = function (socket) {
                 global.io.sockets.socket(sId).emit('msgAlert', data);
             }
         }
-    });
+    }));
+
 
     socket.on('user:chatable', function (chatable) {
         user.chatable = chatable;

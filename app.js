@@ -9,47 +9,45 @@ var express = require('express')
     , path = require('path')
     , server = http.createServer(app)
     , routes = require('./routes')
+    , errorHandler = require('./routes/errorHandler.js')
     , socket = require('./routes/socket.js')
-    , io = require('socket.io').listen(server);
-//    , moment = require('moment');
-
-
-
+    , io = require('socket.io').listen(server)
+    , domain = require('domain');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
 
-//development only
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
-}
+
+
+app.use(express.favicon())
+    .use(express.logger('dev'))
+    .use(express.bodyParser())
+    .use(express.methodOverride())
+    .use(express.static(path.join(__dirname, 'public')))
+    .use(app.router)
+
 
 app.get('/', routes.index);
-app.get('/message/:userId', routes.getMessage);
 app.get('/annonce', routes.getAnnonce);
-
-//var getMessages = function (req, res){
-//    console.log('This is USR MSG');
-//    data = {'data':'this is my data 2'};
-//    res.send(data);
-//    //res.end();
-//};
-//
-//app.get('/messages', getMessages);
-
 
 
 io.sockets.on('connection', socket);
-global.io = io;
 
+global.io = io;
+global.domain = domain;
+
+app.configure('development', function(){
+    app.use(express.errorHandler());
+    io.set('log level', 1); // reduce logging
+});
+
+app.configure('production', function(){
+    app.use(errorHandler());
+    io.set('log level', 1); // reduce logging
+});
 
 server.listen(app.get('port'));
+
 
