@@ -49,15 +49,16 @@ controllers.controller('AnnoncesCtrl', function ($scope, $rootScope, $timeout, $
 
 controllers.controller('UserCtrl', function ($scope, $rootScope, $timeout, $log, ChatsModel, Socket, $http){
 
+    $scope.chatsModel = ChatsModel;
+
     $scope.$watch(function(){return $scope.chatable }, function(value){
-       $log.info(value);
         Socket.emit("user:chatable", value);
     });
 
     Socket.on('user:connect', function (user) {
         $log.info('user:connect');
         ChatsModel.user = user;
-        $scope.name = user.name;
+
     });
 
     Socket.on('user:join', function (data) {
@@ -66,6 +67,13 @@ controllers.controller('UserCtrl', function ($scope, $rootScope, $timeout, $log,
 
     Socket.on('user:disconnect', function (data) {
         $log.info('user:disconnect');
+
+        // timer connection was lost shutting down
+        $scope.chatable = false;
+
+        $timeout(function(){
+            Socket.socket.reconnect();
+        },1000)
     });
 
 });

@@ -60,6 +60,7 @@ services.factory('Socket', function ($rootScope) {
                     }
                 });
             })
-        }
+        },
+        socket: socket.socket
     };
 });

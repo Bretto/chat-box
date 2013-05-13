@@ -12,14 +12,13 @@ var express = require('express')
     , errorHandler = require('./routes/errorHandler.js')
     , socket = require('./routes/socket.js')
     , io = require('socket.io').listen(server)
+    , winston = require('winston')
     , domain = require('domain');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-
-
 
 app.use(express.favicon())
     .use(express.logger('dev'))
@@ -32,20 +31,20 @@ app.use(express.favicon())
 app.get('/', routes.index);
 app.get('/annonce', routes.getAnnonce);
 
-
 io.sockets.on('connection', socket);
+//io.set('log level', 1);
 
 global.io = io;
 global.domain = domain;
 
+
 app.configure('development', function(){
     app.use(express.errorHandler());
-    io.set('log level', 1); // reduce logging
 });
 
 app.configure('production', function(){
+    winston.add(winston.transports.File, { filename: 'node.log', json: false });
     app.use(errorHandler());
-    io.set('log level', 1); // reduce logging
 });
 
 server.listen(app.get('port'));

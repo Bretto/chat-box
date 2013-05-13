@@ -1,7 +1,7 @@
 
 
 exports.index = function(req, res){
-    a + b;  //Throw an error!
+    //a + b;  //Throw an error!
   res.render('index', { title: 'Chat Box' });
 };
 

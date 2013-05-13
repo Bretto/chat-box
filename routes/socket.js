@@ -1,5 +1,6 @@
 
 var moment = require('moment');
+var winston = require('winston');
 
 
 var users = (function () {
@@ -107,7 +108,6 @@ module.exports = function (socket) {
     }
 
 
-
     socket.on('user:join', function(data, fn){
         socket.join(data.roomId);
         user.rooms[data.roomId] = data.roomId;
@@ -131,41 +131,52 @@ module.exports = function (socket) {
         socket.broadcast.to(roomId).emit('user:leave', leaveData);
     });
 
-    var domainUserMsg = domain.create();
 
-    domainUserMsg.on('error', function(er) {
-        console.error('Error [user:msg]:', er);
+    socket.on('user:msg', function (data, fn) {
+
+        var d = domain.create();
+        d.on('error', function(err) {
+            winston.error('[domainUserMsg]', err.stack);
+            socket.emit('user:disconnect');
+            fn(false);
+            socket.disconnect();
+            //socket.emit('user:error',{roomId:data.roomId, message:'Message Fail'});
+
+        });
+        d.run(function() {
+
+            //Safeguard
+            if(!usersDico[data.tUser.id])return;
+
+            if(data.msg === "666"){
+                var myError = data.abc();
+            }
+
+            var tUser = usersDico[data.tUser.id];
+            var sId = tUser.sId;
+
+            var dateTime = moment().format("D/M/YYYY HH:MM");
+            data.dateTime = dateTime;
+            data.tUser = user;
+
+
+            //TODO save msg to mySQL
+
+            if(tUser.chatable){
+                //if client and vendor are in the room send msg
+                if(global.io.sockets.clients(data.roomId).length === 2){
+                    socket.broadcast.to(data.roomId).emit('user:msg', data);
+                }
+                //else send a msgAlert to vendor or client...
+                else{
+                    global.io.sockets.socket(sId).emit('msgAlert', data);
+                }
+            }
+
+            fn(true);
+        });
     });
 
-
-    socket.on('user:msg', domainUserMsg.intercept(function (data) {
-
-        //Safeguard
-        if(!usersDico[data.tUser.id])return;
-
-        var myError = data.abc();
-
-        var tUser = usersDico[data.tUser.id];
-        var sId = tUser.sId;
-
-        var dateTime = moment().format("D/M/YYYY HH:MM");
-        data.dateTime = dateTime;
-        data.tUser = user;
-
-
-        //TODO save msg to mySQL
-
-        if(tUser.chatable){
-            //if client and vendor are in the room send msg
-            if(global.io.sockets.clients(data.roomId).length === 2){
-                socket.broadcast.to(data.roomId).emit('user:msg', data);
-            }
-            //else send a msgAlert to vendor or client...
-            else{
-                global.io.sockets.socket(sId).emit('msgAlert', data);
-            }
-        }
-    }));
 
 
     socket.on('user:chatable', function (chatable) {

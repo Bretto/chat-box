@@ -85,7 +85,12 @@
     }
 
     .msg-wrap{
+      opacity: .5;
       background-color: $turquoise;
+    }
+
+    .received{
+      opacity: 1;
     }
 
     .triangle{

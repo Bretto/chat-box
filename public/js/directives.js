@@ -38,6 +38,8 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
 
         init();
 
+
+
         Socket.on('user:msg', function (data) {
             if(data.roomId === scope.data.roomId){
                 scope.data.chatable = true;
@@ -62,10 +64,26 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
             }
         });
 
+        Socket.on('user:error', function (data) {
+            if(data.roomId === scope.data.roomId){
+                addInfoMsg(data.message);
+                //Socket.socket.reconnect();
+                //Socket.emit('disconnect');
+                //Socket.socket.connect();
+            }
+        });
+
         Socket.on('user:chatable', function (data) {
             if(data.roomId === scope.data.roomId){
                 scope.data.chatable = data.chatable;
             }
+        });
+
+        Socket.on('user:connect', function (user) {
+            //$log.info('user:connect');
+            Socket.emit("user:join",scope.data, function(data){
+                scope.data.chatable = data.chatable;
+            });
         });
 
         scope.onSendMsg = function(e){
@@ -82,7 +100,10 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
                        };
 
 
-            Socket.emit("user:msg", data);
+            Socket.emit("user:msg", data, function(received){
+                $log.info('received:',received);
+                scope.received = received;
+            });
             scope.data.sendMsg = '';
         }
 
