@@ -1,6 +1,6 @@
-<div class="msg-me" ng-animate="{enter: 'fade-in-msg'}">
+<div class="msg-me" ng-animate="{enter: 'fade-in-msg'}" ng-class="{received:msg.received}">
     <div>
-        <div class="msg-wrap" ng-class="{received:received}">
+        <div class="msg-wrap">
             <div class="ref"></div>
             <p>{{msg.message}}</p>
         </div>

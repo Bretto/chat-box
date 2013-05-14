@@ -137,10 +137,11 @@ module.exports = function (socket) {
         var d = domain.create();
         d.on('error', function(err) {
             winston.error('[domainUserMsg]', err.stack);
-            socket.emit('user:disconnect');
             fn(false);
+            socket.emit('user:error',{roomId:data.roomId, message:'Connection Lost'});
+            socket.emit('user:disconnect');
             socket.disconnect();
-            //socket.emit('user:error',{roomId:data.roomId, message:'Message Fail'});
+
 
         });
         d.run(function() {

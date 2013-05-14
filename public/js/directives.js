@@ -10,8 +10,8 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         scope.username = '';
         scope.msgCnt = 0;
 
-        function addMeMsg(msg){
-            var msg = {type:"me", message:msg};
+        function addMeMsg(msg, received){
+            var msg = {type:"me", message:msg, received:received};
             scope.messages.push(msg);
         }
 
@@ -65,12 +65,9 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         });
 
         Socket.on('user:error', function (data) {
-            if(data.roomId === scope.data.roomId){
+            //(data.roomId === scope.data.roomId){
                 addInfoMsg(data.message);
-                //Socket.socket.reconnect();
-                //Socket.emit('disconnect');
-                //Socket.socket.connect();
-            }
+            //}
         });
 
         Socket.on('user:chatable', function (data) {
@@ -80,7 +77,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         });
 
         Socket.on('user:connect', function (user) {
-            //$log.info('user:connect');
+            addInfoMsg('Connection found');
             Socket.emit("user:join",scope.data, function(data){
                 scope.data.chatable = data.chatable;
             });
@@ -89,7 +86,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         scope.onSendMsg = function(e){
 
             if(scope.data.sendMsg === '')return;
-            addMeMsg(scope.data.sendMsg);
+
 
             var data = {
                         tUser:scope.data.tUser,
@@ -102,9 +99,11 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
 
             Socket.emit("user:msg", data, function(received){
                 $log.info('received:',received);
-                scope.received = received;
+                //scope.received = received;
+                addMeMsg(scope.data.sendMsg, received);
+                scope.data.sendMsg = '';
             });
-            scope.data.sendMsg = '';
+
         }
 
         scope.isCntVisible = function(){

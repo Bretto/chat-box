@@ -80,25 +80,40 @@
     float: right;
     clear: both;
 
-    p{
-      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    &.received{
+      p{
+        color: #ffffff;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+      }
+
+      .msg-wrap{
+        background-color: $turquoise;
+      }
+
+      .triangle{
+        border-color: $turquoise transparent transparent transparent;
+      }
     }
+
+
 
     .msg-wrap{
-      opacity: .5;
-      background-color: $turquoise;
+      //background-color: $turquoise;
+      background-color: rgba($silver,.2);
     }
 
-    .received{
-      opacity: 1;
+    p{
+      color: rgba($wet-asphalt,.5);
     }
+
+
 
     .triangle{
       width: 0px;
       height: 0px;
       border-style: solid;
       border-width: 15px 0px 0 15px;
-      border-color: $turquoise transparent transparent transparent;
+      border-color: rgba($silver,.2) transparent transparent transparent;
       float: right;
     }
 
