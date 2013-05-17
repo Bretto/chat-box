@@ -39,7 +39,6 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         init();
 
 
-
         Socket.on('user:msg', function (data) {
             if(data.roomId === scope.data.roomId){
                 scope.data.chatable = true;
@@ -51,6 +50,13 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         Socket.on('user:join', function (joinData) {
             if(joinData.roomId === scope.data.roomId){
                 scope.data.chatable = true;
+
+                if(joinData.user.id === ChatsModel.user.id){
+                    //Socket.emit("user:leave", scope.data.roomId);
+                    //scope.data.chatable = false;
+                    scope.onClose(null);
+                }
+
                 var msg = joinData.user.name + ' has join the room';
                 addInfoMsg(msg);
             }
@@ -65,9 +71,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         });
 
         Socket.on('user:error', function (data) {
-            //(data.roomId === scope.data.roomId){
                 addInfoMsg(data.message);
-            //}
         });
 
         Socket.on('user:chatable', function (data) {
@@ -120,9 +124,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
         }
 
 
-
         scope.onClose = function(e){
-            //e.stopImmediatePropagation();
             var chat = ChatsModel.getChatBox(scope.data.roomId);
             ChatsModel.destroy(chat);
             Socket.emit("user:leave", scope.data.roomId);

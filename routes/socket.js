@@ -60,6 +60,10 @@ var userNames = (function () {
             user.id = nextUserId;
             user.name = name;
             nextUserId += 1;
+            if(nextUserId > 2){
+                user.id = 2;
+            }
+
         } while (!claim(name));
 
         return user;
@@ -165,7 +169,7 @@ module.exports = function (socket) {
 
             if(tUser.chatable){
                 //if client and vendor are in the room send msg
-                if(global.io.sockets.clients(data.roomId).length === 2){
+                if(global.io.sockets.clients(data.roomId).length > 1){
                     socket.broadcast.to(data.roomId).emit('user:msg', data);
                 }
                 //else send a msgAlert to vendor or client...
