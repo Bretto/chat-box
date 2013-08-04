@@ -2,36 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a97f557-a77f-4798-815a-526bb7b2c884" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/base.scssc" afterPath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/base.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-box.scssc" afterPath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-box.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-header.scssc" afterPath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-header.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-section.scssc" afterPath="$PROJECT_DIR$/.sass-cache/197ff8c45d35587314fc50001f1697ca06ea1c64/chat-section.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/base.css" afterPath="$PROJECT_DIR$/public/stylesheets/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/base.scss" afterPath="$PROJECT_DIR$/sass/base.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/chat-box.css" afterPath="$PROJECT_DIR$/public/stylesheets/chat-box.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partial/chat-box.html" afterPath="$PROJECT_DIR$/public/partial/chat-box.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/chat-box.scss" afterPath="$PROJECT_DIR$/sass/chat-box.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/chat-header.css" afterPath="$PROJECT_DIR$/public/stylesheets/chat-header.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/chat-header.scss" afterPath="$PROJECT_DIR$/sass/chat-header.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/chat-section.scss" afterPath="$PROJECT_DIR$/sass/chat-section.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers.js" afterPath="$PROJECT_DIR$/public/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/directives.js" afterPath="$PROJECT_DIR$/public/js/directives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/socket.js" afterPath="$PROJECT_DIR$/routes/socket.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chat-box.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368637865256" ignored="false" />
+    <file path="/Dummy.txt" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1375574812784" ignored="false" />
     <file path="/config.rb" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1366925929276" ignored="false" />
     <file path="/layout.ejs" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1366933369569" ignored="false" />
-    <file path="/app.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368417961874" ignored="false" />
+    <file path="/app.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369118444396" ignored="false" />
     <file path="/chats.ejs" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367376474927" ignored="false" />
     <file path="/dummy.xml" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367455310237" ignored="false" />
     <file path="$PROJECT_DIR$/../node_notification/views/layout.ejs" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1366932618928" ignored="false" />
-    <file path="/screen.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367364985562" ignored="false" />
-    <file path="/chat-box.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367398688363" ignored="false" />
-    <file path="/controllers.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368484212777" ignored="false" />
-    <file path="/services.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368434252573" ignored="false" />
-    <file path="/index.ejs" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367721249273" ignored="false" />
-    <file path="/chat-box.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367216626946" ignored="false" />
+    <file path="/screen.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369269918044" ignored="false" />
+    <file path="/chat-box.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1375581493892" ignored="false" />
+    <file path="/controllers.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1375578775286" ignored="false" />
+    <file path="/services.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369266711953" ignored="false" />
+    <file path="/index.ejs" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369352211620" ignored="false" />
+    <file path="/chat-box.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1375577681428" ignored="false" />
     <file path="/chat-section.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367719886324" ignored="false" />
-    <file path="/chat-header.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368066694788" ignored="false" />
+    <file path="/chat-header.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1375583478631" ignored="false" />
     <file path="/chat-footer.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367546419911" ignored="false" />
-    <file path="/chat-section.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368492295235" ignored="false" />
+    <file path="/chat-section.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1375583601844" ignored="false" />
     <file path="/chats.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367017753700" ignored="false" />
     <file path="/chats-box.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367398794659" ignored="false" />
     <file path="$PROJECT_DIR$/../node_notification/app.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367022857577" ignored="false" />
     <file path="$PROJECT_DIR$/../node_notification/public/javascripts/services.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367022188551" ignored="false" />
     <file path="$PROJECT_DIR$/../socket-test/app.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367024807216" ignored="false" />
     <file path="$PROJECT_DIR$/../socket-test/index.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367024907931" ignored="false" />
-    <file path="/index.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368447816964" ignored="false" />
+    <file path="/index.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368863878102" ignored="false" />
     <file path="$PROJECT_DIR$/../node_notification/routes/index.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367030559356" ignored="false" />
     <file path="/chats-admin.ejs" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368318113857" ignored="false" />
     <file path="/connnections.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367033110421" ignored="false" />
@@ -40,31 +54,71 @@
     <file path="/connections.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367048082583" ignored="false" />
     <file path="/connection.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367034293825" ignored="false" />
     <file path="/socket.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368743207535" ignored="false" />
-    <file path="/fragment.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368482947413" ignored="false" />
+    <file path="/fragment.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369382085482" ignored="false" />
     <file path="/connections.htm" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367282011094" ignored="false" />
     <file path="/connections.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367275285052" ignored="false" />
     <file path="/chat-msg.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367371741413" ignored="false" />
-    <file path="/directives.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368748892322" ignored="false" />
+    <file path="/directives.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1375584656453" ignored="false" />
     <file path="/chat-footer.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367824584473" ignored="false" />
-    <file path="/index.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368404043520" ignored="false" />
-    <file path="/chat-header.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368100270864" ignored="false" />
+    <file path="/index.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369382007383" ignored="false" />
+    <file path="/chat-header.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1375577433239" ignored="false" />
     <file path="/connections.css" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367273481898" ignored="false" />
-    <file path="/annonces.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367287701695" ignored="false" />
-    <file path="/annonce.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367368398700" ignored="false" />
-    <file path="/annonces.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367287605356" ignored="false" />
+    <file path="/annonces.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369373458291" ignored="false" />
+    <file path="/annonce.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369378180434" ignored="false" />
+    <file path="/annonces.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369378309947" ignored="false" />
     <file path="/user.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368481689043" ignored="false" />
     <file path="/user.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367364952498" ignored="false" />
     <file path="/msg-info.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367880988168" ignored="false" />
     <file path="/msg-you.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368488409070" ignored="false" />
     <file path="/msg-me.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368492108752" ignored="false" />
-    <file path="/base.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1367628453635" ignored="false" />
-    <file path="/package.json" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368413466025" ignored="false" />
+    <file path="/base.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1375583971244" ignored="false" />
+    <file path="/package.json" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369115639735" ignored="false" />
     <file path="/connect-domain.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368322183925" ignored="false" />
     <file path="/errorHandler.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368418060523" ignored="false" />
     <file path="$PROJECT_DIR$/../arnaud/index.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368447874802" ignored="false" />
     <file path="$PROJECT_DIR$/../arnaud/style.css" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368447730299" ignored="false" />
     <file path="/style.css" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368447730299" ignored="false" />
     <file path="/a.dummy" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368487408191" ignored="false" />
+    <file path="$PROJECT_DIR$/../NewsReader/js/NewsReaderApp.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368769821583" ignored="false" />
+    <file path="$PROJECT_DIR$/../breeze/todo.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368791506389" ignored="false" />
+    <file path="$PROJECT_DIR$/../breeze/js/services.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368792136786" ignored="false" />
+    <file path="$PROJECT_DIR$/../BreezeExpressDemo/package.json" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368794748664" ignored="false" />
+    <file path="$PROJECT_DIR$/../BreezeExpressDemo/server.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368840568780" ignored="false" />
+    <file path="$PROJECT_DIR$/../BreezeExpressDemo/public/index.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368865376024" ignored="false" />
+    <file path="$PROJECT_DIR$/../BreezeExpressDemo/public/Scripts/jquery-1.8.3.min.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1368864520939" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/config.rb" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369115042105" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/views/index.ejs" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369356082858" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/package.json" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369115644719" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/public/js/controllers.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369377208226" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/public/js/directives.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369351928900" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/public/js/services.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369268608209" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/sass/screen.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369269923735" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/app.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369119892318" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/routes/index.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369382015605" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/casper.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369176757689" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/public/partial/annonce.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369378180434" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/public/partial/search.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369373538350" ignored="false" />
+    <file path="/search.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369373538651" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/sass/annonces.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369378332483" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/sass/base.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369270075416" ignored="false" />
+    <file path="/search.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369358246910" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/sass/search.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369369360518" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/sass/main.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369270533581" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/public/js/filters.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369377753728" ignored="false" />
+    <file path="/filters.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369377547114" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/public/partial/annonces.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369373553843" ignored="false" />
+    <file path="$PROJECT_DIR$/../AngularJS-Animation-Article-master/app/index.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369352645758" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/public/stylesheets/annonces.css" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369378165154" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/public/stylesheets/screen.css" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369378165154" ignored="false" />
+    <file path="$PROJECT_DIR$/../pitbull/casper/legratuit.nc.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369380653634" ignored="false" />
+    <file path="/legratuit.nc.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1369380626959" ignored="false" />
+    <file path="$PROJECT_DIR$/../mobile-layout/public/sass/pri-nav.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1371170983327" ignored="false" />
+    <file path="$PROJECT_DIR$/../mobile-layout/public/sass/base.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1371170984533" ignored="false" />
+    <file path="$PROJECT_DIR$/../mobile-layout/public/js/services.js" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1371170984533" ignored="false" />
+    <file path="$PROJECT_DIR$/../mobile-layout/public/sass/screen.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1371170984533" ignored="false" />
+    <file path="$PROJECT_DIR$/../mobile-layout/public/index.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1371170984533" ignored="false" />
+    <file path="$PROJECT_DIR$/../mobile-layout/public/partials/pri-nav.html" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1371170984533" ignored="false" />
+    <file path="$PROJECT_DIR$/../mobile-layout/public/sass/page.scss" changelist="3a97f557-a77f-4798-815a-526bb7b2c884" time="1371170984533" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +141,7 @@
       <file leaf-file-name="socket.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/socket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="61" selection-start="3612" selection-end="3612" vertical-scroll-proportion="0.0">
+            <state line="176" column="70" selection-start="4140" selection-end="4140" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,70 +150,16 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="31" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.0">
+            <state line="40" column="20" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="chat-box.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sass/chat-box.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="40" selection-start="495" selection-end="499" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="msg-you.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/partial/msg-you.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="msg-me.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/partial/msg-me.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="90" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat-box.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/partial/chat-box.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chats-box.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/partial/chats-box.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat-section.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/partial/chat-section.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="95" selection-start="152" selection-end="155" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat-section.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sass/chat-section.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="18" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0">
+            <state line="17" column="0" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -168,7 +168,61 @@
       <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="40" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.070202805">
+            <state line="137" column="40" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.90660024">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat-header.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sass/chat-header.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="43" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat-section.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sass/chat-section.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="237" column="0" selection-start="3964" selection-end="3964" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sass/base.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="0" selection-start="1340" selection-end="1521" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat-header.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/partial/chat-header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="9" selection-start="402" selection-end="402" vertical-scroll-proportion="-3.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chats-box.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/partial/chats-box.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat-box.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/partial/chat-box.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="55" selection-start="55" selection-end="55" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -193,29 +247,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/chats.ejs" />
-        <option value="$PROJECT_DIR$/views/chats-admin.ejs" />
-        <option value="$PROJECT_DIR$/routes/connect-domain.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/errorHandler.js" />
         <option value="$PROJECT_DIR$/node.log" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/js/services.js" />
         <option value="$PROJECT_DIR$/public/partial/user.html" />
-        <option value="$PROJECT_DIR$/public/js/controllers.js" />
         <option value="$PROJECT_DIR$/public/partial/msg-you.html" />
         <option value="$PROJECT_DIR$/public/partial/msg-me.html" />
-        <option value="$PROJECT_DIR$/sass/chat-section.scss" />
         <option value="$PROJECT_DIR$/routes/socket.js" />
+        <option value="$PROJECT_DIR$/public/partial/chat-header.html" />
+        <option value="$PROJECT_DIR$/public/partial/chat-box.html" />
+        <option value="$PROJECT_DIR$/public/js/controllers.js" />
+        <option value="$PROJECT_DIR$/sass/chat-box.scss" />
+        <option value="$PROJECT_DIR$/sass/base.scss" />
+        <option value="$PROJECT_DIR$/sass/chat-header.scss" />
+        <option value="$PROJECT_DIR$/sass/chat-section.scss" />
         <option value="$PROJECT_DIR$/public/js/directives.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="2" />
     <option name="y" value="22" />
-    <option name="width" value="1025" />
-    <option name="height" value="1170" />
+    <option name="width" value="1916" />
+    <option name="height" value="1174" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -271,6 +326,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat-box" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat-box" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat-box" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat-box" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat-box" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat-box" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -303,6 +404,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="partial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat-box" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat-box" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -315,14 +434,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.fileTypes" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../arnaud" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -409,14 +528,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1025" height="1170" extended-state="0" />
+    <frame x="2" y="22" width="1916" height="1174" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298479" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249501" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28143713" sideWeight="0.65779465" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34220532" sideWeight="0.998004" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1294242" sideWeight="0.7869318" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21306819" sideWeight="0.998004" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298479" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -456,7 +575,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -500,36 +619,44 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node.log">
+    <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="0" selection-start="26900" selection-end="26900" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="63" selection-start="81" selection-end="140" vertical-scroll-proportion="-2.5">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/partial/user.html">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="288" selection-end="288" vertical-scroll-proportion="-3.75" />
+        <state line="21" column="0" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="14" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0" />
+        <state line="46" column="32" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/partial/msg-you.html">
+    <entry file="file://$PROJECT_DIR$/views/chats-admin.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="-0.0">
+        <state line="12" column="6" selection-start="398" selection-end="398" vertical-scroll-proportion="-7.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="23" selection-start="356" selection-end="356" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/chats.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
@@ -541,63 +668,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/socket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="70" selection-start="4140" selection-end="4140" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/partial/chat-header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="9" selection-start="402" selection-end="402" vertical-scroll-proportion="-3.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/partial/chat-box.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0">
+        <state line="0" column="55" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/partial/chat-section.html">
+    <entry file="file://$PROJECT_DIR$/sass/chat-box.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="95" selection-start="152" selection-end="155" vertical-scroll-proportion="0.0">
+        <state line="17" column="0" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/partial/msg-info.html">
+    <entry file="file://$PROJECT_DIR$/sass/chat-header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="77" column="43" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/partial/msg-me.html">
+    <entry file="file://$PROJECT_DIR$/sass/base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="90" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
+        <state line="64" column="0" selection-start="1340" selection-end="1521" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/chat-section.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="18" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0">
+        <state line="237" column="0" selection-start="3964" selection-end="3964" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="31" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="40" selection-start="495" selection-end="499" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/socket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="61" selection-start="3612" selection-end="3612" vertical-scroll-proportion="0.0">
+        <state line="40" column="20" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="40" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.070202805">
+        <state line="137" column="40" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.90660024">
           <folding />
         </state>
       </provider>

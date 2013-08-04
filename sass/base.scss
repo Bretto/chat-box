@@ -7,10 +7,7 @@
   box-sizing: border-box;
 }
 
-body, html{
-  height: 100%;
-  background-color: #086F1E;
-}
+
 
 
 @mixin blue-grad-background() {
@@ -54,6 +51,24 @@ $silver: #bdc3c7;
 
 $concrete: #95a5a6;
 $asbestos: #7f8c8d;
+
+
+$immobilier: #37487F;
+$annonces: #086F1E;
+$automobiles: #DB7424;
+$nautisme: #1970BD;
+$embauche: #7C7C7C;
+$mode: #8F0AAA;
+$batiment: #212121;
+$rencontre: #A8260D;
+$wamland: #800C16;
+
+
+body, html{
+  height: 100%;
+  background-color: $automobiles;
+}
+
 
 
 

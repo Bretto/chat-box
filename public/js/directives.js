@@ -30,6 +30,9 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
             if(angular.isDefined(scope.data.msg)){
                 addYouMsg(scope.data);
             }
+
+            scope.context = scope.data.context;
+
             scope.username = ChatsModel.user.name;
             Socket.emit("user:join",scope.data, function(data){
                 scope.data.chatable = data.chatable;
@@ -128,6 +131,12 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
             var chat = ChatsModel.getChatBox(scope.data.roomId);
             ChatsModel.destroy(chat);
             Socket.emit("user:leave", scope.data.roomId);
+        }
+
+        scope.getChatContext = function(){
+//            $log.info('context:', scope.context);
+            var context =  scope.context;
+            return context;
         }
 
     }

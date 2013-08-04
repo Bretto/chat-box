@@ -27,12 +27,19 @@ controllers.controller('AnnoncesCtrl', function ($scope, $rootScope, $timeout, $
             $log.info('error',data);
         });
 
+
+    function getChatContext(){
+        var context = 'automobile';
+        return context;
+    }
+
     $scope.onMakeChatBox = function(annonce){
 
         //check that annonce Id Vendeur is different from Id User
         if(annonce.uId === ChatsModel.user.id)return;
 
         var data = {
+                        context: getChatContext(),
                         tUser:{name:'unknown', id:annonce.uId},
                         aId:annonce.aId,
                         title:annonce.title,
@@ -58,7 +65,6 @@ controllers.controller('UserCtrl', function ($scope, $rootScope, $timeout, $log,
     Socket.on('user:connect', function (user) {
         $log.info('user:connect');
         ChatsModel.user = user;
-
     });
 
     Socket.on('user:join', function (data) {

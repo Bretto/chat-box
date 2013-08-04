@@ -1,9 +1,9 @@
 /*
-Syntax error: Undefined variable: "$orange".
-        on line 48 of /Users/Separ8/Sites/chat-box/sass/chat-header.scss
+Syntax error: Undefined variable: "$turquoise".
+        on line 50 of /Users/Separ8/Sites/chat-box/sass/chat-header.scss
 
 Backtrace:
-/Users/Separ8/Sites/chat-box/sass/chat-header.scss:48
+/Users/Separ8/Sites/chat-box/sass/chat-header.scss:50
 /Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/node.rb:40:in `perform'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/list.rb:70:in `_perform'
@@ -109,4 +109,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$orange\".\A         on line 48 of /Users/Separ8/Sites/chat-box/sass/chat-header.scss"; }
+  content: "Syntax error: Undefined variable: \"$turquoise\".\A         on line 50 of /Users/Separ8/Sites/chat-box/sass/chat-header.scss"; }

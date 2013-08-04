@@ -167,7 +167,11 @@
       color: $silver;
     }
 
+
+
   }
+
+
 
   .msg-info{
 
@@ -184,5 +188,111 @@
   }
 
 
+  .immobilier{
+    .msg-you{
+      .msg-wrap{
+        background: hsl( hue($immobilier), 30%, 40%);
+      }
+
+      .triangle{
+        border-color: hsl( hue($immobilier), 30%, 40%) transparent transparent transparent;
+      }
+    }
+  }
+
+  .annonces{
+    .msg-you{
+      .msg-wrap{
+        background: hsl( hue($annonces), 30%, 40%);
+      }
+
+      .triangle{
+        border-color: hsl( hue($annonces), 30%, 40%) transparent transparent transparent;
+      }
+    }
+  }
+
+  .automobile{
+    .msg-you{
+      .msg-wrap{
+        background: hsl( hue($automobiles), 30%, 40%);
+      }
+
+      .triangle{
+        border-color: hsl( hue($automobiles), 30%, 40%) transparent transparent transparent;
+      }
+    }
+  }
+
+  .nautisme{
+    .msg-you{
+      .msg-wrap{
+        background: hsl( hue($nautisme), 30%, 40%);
+      }
+
+      .triangle{
+        border-color: hsl( hue($nautisme), 30%, 40%) transparent transparent transparent;
+      }
+    }
+  }
+
+  .embauche{
+    .msg-you{
+      .msg-wrap{
+        background: hsl( hue($embauche), 30%, 40%);
+      }
+
+      .triangle{
+        border-color: hsl( hue($embauche), 30%, 40%) transparent transparent transparent;
+      }
+    }
+  }
+
+  .mode{
+    .msg-you{
+      .msg-wrap{
+        background: hsl( hue($mode), 30%, 40%);
+      }
+
+      .triangle{
+        border-color: hsl( hue($mode), 30%, 40%) transparent transparent transparent;
+      }
+    }
+  }
+
+  .batiment{
+    .msg-you{
+      .msg-wrap{
+        background: hsl( hue($batiment), 30%, 40%);
+      }
+
+      .triangle{
+        border-color: hsl( hue($batiment), 30%, 40%) transparent transparent transparent;
+      }
+    }
+  }
+
+  .rencontre{
+    .msg-you{
+      .msg-wrap{
+        background: hsl( hue($rencontre), 30%, 40%);
+      }
+
+      .triangle{
+        border-color: hsl( hue($rencontre), 30%, 40%) transparent transparent transparent;
+      }
+    }
+  }
+  .wamland{
+    .msg-you{
+      .msg-wrap{
+        background: hsl( hue($wamland), 30%, 40%);
+      }
+
+      .triangle{
+        border-color: hsl( hue($wamland), 30%, 40%) transparent transparent transparent;
+      }
+    }
+  }
 
 }

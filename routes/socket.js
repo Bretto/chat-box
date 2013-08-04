@@ -61,7 +61,7 @@ var userNames = (function () {
             user.name = name;
             nextUserId += 1;
             if(nextUserId > 2){
-                user.id = 2;
+                //user.id = 2;
             }
 
         } while (!claim(name));

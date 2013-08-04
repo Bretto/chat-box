@@ -5,10 +5,10 @@
   box-sizing: border-box;
 }
 
-/* line 10, ../../sass/base.scss */
+/* line 67, ../../sass/base.scss */
 body, html {
   height: 100%;
-  background-color: #086F1E;
+  background-color: #db7424;
 }
 
 /* line 1, ../../sass/chats-box.scss */
@@ -30,7 +30,7 @@ body, html {
   background: #2D3E4F;
   position: relative;
 }
-/* line 9, ../../sass/chat-header.scss */
+/* line 11, ../../sass/chat-header.scss */
 .chat-box header label {
   display: inline-block;
   color: #ffffff;
@@ -42,7 +42,7 @@ body, html {
   overflow: hidden;
   font-weight: lighter;
 }
-/* line 21, ../../sass/chat-header.scss */
+/* line 23, ../../sass/chat-header.scss */
 .chat-box header i {
   float: right;
   color: rgba(255, 255, 255, 0.2);
@@ -51,11 +51,11 @@ body, html {
   padding-top: 9px;
   line-height: 22px;
 }
-/* line 29, ../../sass/chat-header.scss */
+/* line 31, ../../sass/chat-header.scss */
 .chat-box header i:hover {
   color: rgba(255, 255, 255, 0.5);
 }
-/* line 34, ../../sass/chat-header.scss */
+/* line 36, ../../sass/chat-header.scss */
 .chat-box header .triangle {
   display: inline-block;
   position: absolute;
@@ -68,11 +68,11 @@ body, html {
   border-width: 15px 15px 0 0;
   border-color: rgba(255, 255, 255, 0.2) transparent transparent transparent;
 }
-/* line 47, ../../sass/chat-header.scss */
+/* line 49, ../../sass/chat-header.scss */
 .chat-box header .chatable {
-  border-color: #f39c12 transparent transparent transparent;
+  border-color: #1abc9c transparent transparent transparent;
 }
-/* line 51, ../../sass/chat-header.scss */
+/* line 53, ../../sass/chat-header.scss */
 .chat-box header .new-msg-cnt {
   float: right;
   margin-top: 6px;
@@ -95,6 +95,10 @@ body, html {
   border-radius: 30px;
   font-weight: lighter;
   background-color: #f39c12;
+}
+/* line 77, ../../sass/chat-header.scss */
+.chat-box .automobile header {
+  background: #856247;
 }
 
 /* line 3, ../../sass/chat-section.scss */
@@ -255,17 +259,89 @@ body, html {
   display: inline-block;
   color: #bdc3c7;
 }
-/* line 172, ../../sass/chat-section.scss */
+/* line 176, ../../sass/chat-section.scss */
 .chat-box .msg-info {
   text-align: center;
 }
-/* line 176, ../../sass/chat-section.scss */
+/* line 180, ../../sass/chat-section.scss */
 .chat-box .msg-info .msg-wrap {
   background-color: rgba(189, 195, 199, 0.2);
 }
-/* line 180, ../../sass/chat-section.scss */
+/* line 184, ../../sass/chat-section.scss */
 .chat-box .msg-info p {
   color: rgba(52, 73, 94, 0.5);
+}
+/* line 193, ../../sass/chat-section.scss */
+.chat-box .immobilier .msg-you .msg-wrap {
+  background: #475685;
+}
+/* line 197, ../../sass/chat-section.scss */
+.chat-box .immobilier .msg-you .triangle {
+  border-color: #475685 transparent transparent transparent;
+}
+/* line 205, ../../sass/chat-section.scss */
+.chat-box .annonces .msg-you .msg-wrap {
+  background: #478554;
+}
+/* line 209, ../../sass/chat-section.scss */
+.chat-box .annonces .msg-you .triangle {
+  border-color: #478554 transparent transparent transparent;
+}
+/* line 217, ../../sass/chat-section.scss */
+.chat-box .automobile .msg-you .msg-wrap {
+  background: #856247;
+}
+/* line 221, ../../sass/chat-section.scss */
+.chat-box .automobile .msg-you .triangle {
+  border-color: #856247 transparent transparent transparent;
+}
+/* line 229, ../../sass/chat-section.scss */
+.chat-box .nautisme .msg-you .msg-wrap {
+  background: #476885;
+}
+/* line 233, ../../sass/chat-section.scss */
+.chat-box .nautisme .msg-you .triangle {
+  border-color: #476885 transparent transparent transparent;
+}
+/* line 241, ../../sass/chat-section.scss */
+.chat-box .embauche .msg-you .msg-wrap {
+  background: #854747;
+}
+/* line 245, ../../sass/chat-section.scss */
+.chat-box .embauche .msg-you .triangle {
+  border-color: #854747 transparent transparent transparent;
+}
+/* line 253, ../../sass/chat-section.scss */
+.chat-box .mode .msg-you .msg-wrap {
+  background: #7a4785;
+}
+/* line 257, ../../sass/chat-section.scss */
+.chat-box .mode .msg-you .triangle {
+  border-color: #7a4785 transparent transparent transparent;
+}
+/* line 265, ../../sass/chat-section.scss */
+.chat-box .batiment .msg-you .msg-wrap {
+  background: #854747;
+}
+/* line 269, ../../sass/chat-section.scss */
+.chat-box .batiment .msg-you .triangle {
+  border-color: #854747 transparent transparent transparent;
+}
+/* line 277, ../../sass/chat-section.scss */
+.chat-box .rencontre .msg-you .msg-wrap {
+  background: #855147;
+}
+/* line 281, ../../sass/chat-section.scss */
+.chat-box .rencontre .msg-you .triangle {
+  border-color: #855147 transparent transparent transparent;
+}
+/* line 288, ../../sass/chat-section.scss */
+.chat-box .wamland .msg-you .msg-wrap {
+  background: #85474d;
+}
+/* line 292, ../../sass/chat-section.scss */
+.chat-box .wamland .msg-you .triangle {
+  border-color: #85474d transparent transparent transparent;
 }
 
 /* line 6, ../../sass/chat-footer.scss */
@@ -291,6 +367,9 @@ body, html {
   display: inline-block;
   width: 350px;
   padding: 0;
+  -webkit-box-shadow: black 0 0 10px;
+  -moz-box-shadow: black 0 0 10px;
+  box-shadow: black 0 0 10px;
 }
 
 /* line 1, ../../sass/connection.scss */

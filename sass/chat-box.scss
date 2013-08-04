@@ -12,4 +12,6 @@
   padding: 0;
   //background: #f2f2f2;
   //@include border-top-radius(5px);
+
+  @include box-shadow(black 0 0 10px);
 }

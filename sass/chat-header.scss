@@ -6,6 +6,8 @@
       background: #2D3E4F;
       position: relative;
 
+
+
       label{
         display: inline-block;
         color: #ffffff;
@@ -45,7 +47,7 @@
       }
 
       .chatable{
-        border-color: $orange transparent transparent transparent;
+        border-color: $turquoise transparent transparent transparent;
       }
 
       .new-msg-cnt{
@@ -70,5 +72,12 @@
       }
 
     }
+
+  .automobile{
+    header{
+      background: hsl( hue($automobiles), 30%, 40%);
+    }
+  }
+
 
 }
