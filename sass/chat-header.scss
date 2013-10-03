@@ -73,9 +73,57 @@
 
     }
 
+  .immobilier{
+    header{
+      background: hsl( hue($immobilier), 30%, 40%);
+    }
+  }
+
+  .annonce{
+    header{
+      background: hsl( hue($annonce), 30%, 40%);
+    }
+  }
+
   .automobile{
     header{
-      background: hsl( hue($automobiles), 30%, 40%);
+      background: hsl( hue($automobile), 30%, 40%);
+    }
+  }
+
+  .nautisme{
+    header{
+      background: hsl( hue($nautisme), 30%, 40%);
+    }
+  }
+
+  .embauche{
+    header{
+      background: hsl( hue($embauche), 30%, 40%);
+    }
+  }
+
+  .mode{
+    header{
+      background: hsl( hue($mode), 30%, 40%);
+    }
+  }
+
+  .batiment{
+    header{
+      background: hsl( hue($batiment), 30%, 40%);
+    }
+  }
+
+  .rencontre{
+    header{
+      background: hsl( hue($rencontre), 30%, 40%);
+    }
+  }
+
+  .wamland{
+    header{
+      background: hsl( hue($wamland), 30%, 40%);
     }
   }
 

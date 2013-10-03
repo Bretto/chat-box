@@ -8,5 +8,40 @@
 /* line 67, ../../sass/base.scss */
 body, html {
   height: 100%;
+}
+/* line 71, ../../sass/base.scss */
+body.immobilier, html.immobilier {
+  background-color: #37487f;
+}
+/* line 75, ../../sass/base.scss */
+body.annonce, html.annonce {
+  background-color: #086f1e;
+}
+/* line 79, ../../sass/base.scss */
+body.automobile, html.automobile {
   background-color: #db7424;
+}
+/* line 83, ../../sass/base.scss */
+body.nautisme, html.nautisme {
+  background-color: #1970bd;
+}
+/* line 87, ../../sass/base.scss */
+body.embauche, html.embauche {
+  background-color: #7c7c7c;
+}
+/* line 91, ../../sass/base.scss */
+body.mode, html.mode {
+  background-color: #8f0aaa;
+}
+/* line 95, ../../sass/base.scss */
+body.batiment, html.batiment {
+  background-color: #212121;
+}
+/* line 99, ../../sass/base.scss */
+body.rencontre, html.rencontre {
+  background-color: #a8260d;
+}
+/* line 103, ../../sass/base.scss */
+body.wamland, html.wamland {
+  background-color: #800c16;
 }

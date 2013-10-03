@@ -75,7 +75,7 @@ Backtrace:
 /Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:126:in `timed'
 /Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:100:in `run'
 /Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/lib/compass/commands/watch_project.rb:147:in `recompile'
-/Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `to_proc'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `to_proc'
 /Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `call'
 /Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
 /Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'

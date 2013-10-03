@@ -8,7 +8,42 @@
 /* line 67, ../../sass/base.scss */
 body, html {
   height: 100%;
+}
+/* line 71, ../../sass/base.scss */
+body.immobilier, html.immobilier {
+  background-color: #37487f;
+}
+/* line 75, ../../sass/base.scss */
+body.annonce, html.annonce {
+  background-color: #086f1e;
+}
+/* line 79, ../../sass/base.scss */
+body.automobile, html.automobile {
   background-color: #db7424;
+}
+/* line 83, ../../sass/base.scss */
+body.nautisme, html.nautisme {
+  background-color: #1970bd;
+}
+/* line 87, ../../sass/base.scss */
+body.embauche, html.embauche {
+  background-color: #7c7c7c;
+}
+/* line 91, ../../sass/base.scss */
+body.mode, html.mode {
+  background-color: #8f0aaa;
+}
+/* line 95, ../../sass/base.scss */
+body.batiment, html.batiment {
+  background-color: #212121;
+}
+/* line 99, ../../sass/base.scss */
+body.rencontre, html.rencontre {
+  background-color: #a8260d;
+}
+/* line 103, ../../sass/base.scss */
+body.wamland, html.wamland {
+  background-color: #800c16;
 }
 
 /* line 1, ../../sass/chats-box.scss */
@@ -97,8 +132,40 @@ body, html {
   background-color: #f39c12;
 }
 /* line 77, ../../sass/chat-header.scss */
+.chat-box .immobilier header {
+  background: #475685;
+}
+/* line 83, ../../sass/chat-header.scss */
+.chat-box .annonce header {
+  background: #478554;
+}
+/* line 89, ../../sass/chat-header.scss */
 .chat-box .automobile header {
   background: #856247;
+}
+/* line 95, ../../sass/chat-header.scss */
+.chat-box .nautisme header {
+  background: #476885;
+}
+/* line 101, ../../sass/chat-header.scss */
+.chat-box .embauche header {
+  background: #854747;
+}
+/* line 107, ../../sass/chat-header.scss */
+.chat-box .mode header {
+  background: #7a4785;
+}
+/* line 113, ../../sass/chat-header.scss */
+.chat-box .batiment header {
+  background: #854747;
+}
+/* line 119, ../../sass/chat-header.scss */
+.chat-box .rencontre header {
+  background: #855147;
+}
+/* line 125, ../../sass/chat-header.scss */
+.chat-box .wamland header {
+  background: #85474d;
 }
 
 /* line 3, ../../sass/chat-section.scss */
@@ -280,11 +347,11 @@ body, html {
   border-color: #475685 transparent transparent transparent;
 }
 /* line 205, ../../sass/chat-section.scss */
-.chat-box .annonces .msg-you .msg-wrap {
+.chat-box .annonce .msg-you .msg-wrap {
   background: #478554;
 }
 /* line 209, ../../sass/chat-section.scss */
-.chat-box .annonces .msg-you .triangle {
+.chat-box .annonce .msg-you .triangle {
   border-color: #478554 transparent transparent transparent;
 }
 /* line 217, ../../sass/chat-section.scss */

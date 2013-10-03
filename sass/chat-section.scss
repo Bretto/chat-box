@@ -200,14 +200,14 @@
     }
   }
 
-  .annonces{
+  .annonce{
     .msg-you{
       .msg-wrap{
-        background: hsl( hue($annonces), 30%, 40%);
+        background: hsl( hue($annonce), 30%, 40%);
       }
 
       .triangle{
-        border-color: hsl( hue($annonces), 30%, 40%) transparent transparent transparent;
+        border-color: hsl( hue($annonce), 30%, 40%) transparent transparent transparent;
       }
     }
   }
@@ -215,11 +215,11 @@
   .automobile{
     .msg-you{
       .msg-wrap{
-        background: hsl( hue($automobiles), 30%, 40%);
+        background: hsl( hue($automobile), 30%, 40%);
       }
 
       .triangle{
-        border-color: hsl( hue($automobiles), 30%, 40%) transparent transparent transparent;
+        border-color: hsl( hue($automobile), 30%, 40%) transparent transparent transparent;
       }
     }
   }

@@ -3,6 +3,27 @@
 
 var controllers = angular.module('App.controllers', []);
 
+controllers.controller('MainCtrl', function($scope){
+
+    $scope.colors = [
+        {name: 'immobilier'},
+        {name: 'annonce'},
+        {name: 'automobile'},
+        {name: 'nautisme'},
+        {name: 'embauche'},
+        {name: 'mode'},
+        {name: 'batiment'},
+        {name: 'rencontre'},
+        {name: 'wamland'}
+    ];
+
+
+//   $scope.getContextClass = function(){
+//       return $scope.currrentContext;
+//   }
+});
+
+
 controllers.controller('ChatsCtrl', function ($scope, $rootScope, $timeout, $log, ChatsModel, Socket){
     $log.info('ChatsCtrl');
     $scope.chats = ChatsModel.chats;
@@ -29,7 +50,7 @@ controllers.controller('AnnoncesCtrl', function ($scope, $rootScope, $timeout, $
 
 
     function getChatContext(){
-        var context = 'automobile';
+        var context = $scope.currentContext.name;
         return context;
     }
 

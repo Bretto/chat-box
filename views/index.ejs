@@ -6,7 +6,10 @@
     <link rel='stylesheet' href='/stylesheets/general_enclosed_foundicons.css' />
     <link rel='stylesheet' href='/stylesheets/screen.css' />
   </head>
-  <body>
+  <body data-ng-controller="MainCtrl" ng-class="currentContext.name">
+  <select ng-model="currentContext" ng-options="c.name for c in colors">
+      <option value="">-- chose color --</option>
+  </select>
     <% include chats-admin %>
     <% include chats %>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>-->

@@ -31,6 +31,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
                 addYouMsg(scope.data);
             }
 
+            //style chatBox from remote
             scope.context = scope.data.context;
 
             scope.username = ChatsModel.user.name;
@@ -96,6 +97,7 @@ directives.directive('chatBox', function ($log, Socket, ChatsModel, $timeout) {
 
 
             var data = {
+                        context:scope.data.context,
                         tUser:scope.data.tUser,
                         aId:scope.data.aId,
                         title:scope.data.title,

@@ -54,8 +54,8 @@ $asbestos: #7f8c8d;
 
 
 $immobilier: #37487F;
-$annonces: #086F1E;
-$automobiles: #DB7424;
+$annonce: #086F1E;
+$automobile: #DB7424;
 $nautisme: #1970BD;
 $embauche: #7C7C7C;
 $mode: #8F0AAA;
@@ -65,9 +65,47 @@ $wamland: #800C16;
 
 
 body, html{
+
   height: 100%;
-  background-color: $automobiles;
+
+  &.immobilier{
+    background-color: $immobilier;
+  }
+
+  &.annonce{
+    background-color: $annonce;
+  }
+
+  &.automobile{
+    background-color: $automobile;
+  }
+
+  &.nautisme{
+    background-color: $nautisme;
+  }
+
+  &.embauche{
+    background-color: $embauche;
+  }
+
+  &.mode{
+    background-color: $mode;
+  }
+
+  &.batiment{
+    background-color: $batiment;
+  }
+
+  &.rencontre{
+    background-color: $rencontre;
+  }
+
+  &.wamland{
+    background-color: $wamland;
+  }
 }
+
+
 
 
 
